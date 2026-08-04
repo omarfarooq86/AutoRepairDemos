@@ -15,7 +15,7 @@ export interface Props {
 const { contact, style } = Astro.props;
 ---
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2 class="section-heading">Visit Us</h2>
   <div class="contact-grid">
     <div class="contact-info">
@@ -44,5 +44,94 @@ const { contact, style } = Astro.props;
         title={`Map showing ${contact.address}`}
       ></iframe>
     </div>
+    <!-- Display-only contact form: the 3 fields are visual placeholders only
+         (no <form> wrapper, no submit button, no submit handler, no JS). -->
+    <div class="contact-form">
+      <h3 class="contact-form-title">Send Us a Message</h3>
+      <div class="contact-form-field">
+        <label class="contact-form-label" for="contact-name">Name</label>
+        <input class="contact-form-input" id="contact-name" name="name" type="text" placeholder="Your name" />
+      </div>
+      <div class="contact-form-field">
+        <label class="contact-form-label" for="contact-phone">Phone</label>
+        <input class="contact-form-input" id="contact-phone" name="phone" type="tel" placeholder="Your phone number" />
+      </div>
+      <div class="contact-form-field">
+        <label class="contact-form-label" for="contact-message">Message</label>
+        <textarea class="contact-form-input" id="contact-message" name="message" rows="4" placeholder="How can we help?"></textarea>
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  /* Minimal layout for the contact grid + display-only form. Colors use the
+     theme custom properties from global.css with fallbacks so the section
+     themes out of the box. Per-demo themed styling (colors, fonts, shadows)
+     is added in demo-1.css / demo-2.css (Tasks 14/15). */
+
+  .contact .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-form-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-accent, #f97316);
+  }
+
+  .contact-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .contact-form-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-muted, #888);
+  }
+
+  .contact-form-input {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--color-text, #e5e5e5);
+    background: var(--color-bg, #1a1a1a);
+    border: 1px solid var(--color-border, #333);
+    border-radius: 4px;
+  }
+
+  .contact-form-input::placeholder {
+    color: var(--color-muted, #888);
+    opacity: 0.7;
+  }
+
+  .contact-form-input:focus-visible {
+    outline: 2px solid var(--color-accent, #f97316);
+    outline-offset: 1px;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+
+  /* Stack the info / map / form columns on small screens. */
+  @media (max-width: 768px) {
+    .contact .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
