@@ -4,8 +4,6 @@ export interface Props {
   style: 'industrial' | 'modern';
 }
 
-// Minimal bridge for the v2 data schema (services are now {name, icon, description} objects).
-// Task 5 replaces this component with the full enhanced version.
 const ICONS: Record<string, string> = {
   engine: '\u{1F69B}',
   body: '\u{1F697}',
@@ -26,14 +24,14 @@ function getIcon(icon: string): string {
 const { services, style } = Astro.props;
 ---
 
-<section class="services">
+<section class="services" id="services">
   <h2 class="section-heading">Our Services</h2>
   <div class="services-grid">
     {services.map((svc) => (
       <div class="service-card">
         {style === 'modern' && <span class="service-icon">{getIcon(svc.icon)}</span>}
-        <span class="service-label">{svc.name}</span>
-        {svc.description && <p class="service-desc">{svc.description}</p>}
+        <h3 class="service-label">{svc.name}</h3>
+        <p class="service-desc">{svc.description}</p>
       </div>
     ))}
   </div>
