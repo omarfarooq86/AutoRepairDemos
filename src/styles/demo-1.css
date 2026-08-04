@@ -1,0 +1,237 @@
+/* ===== THEME: INDUSTRIAL — Demo 1 ===== */
+/* Tokens: bg #1a1a1a | accent #f97316 | text #e5e5e5 | muted #888 | border #333 */
+
+.theme-industrial {
+  background: #1a1a1a;
+  color: #e5e5e5;
+}
+
+/* --- Section Heading --- */
+.theme-industrial .section-heading {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f97316;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #333;
+}
+
+/* --- Hero --- */
+.theme-industrial .hero {
+  padding: 0;
+  max-width: none;
+}
+.theme-industrial .hero-inner {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,26,0.95) 100%),
+    url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80') center/cover no-repeat;
+  position: relative;
+}
+.theme-industrial .hero-est {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #f97316;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.theme-industrial .hero-name {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+.theme-industrial .hero-line {
+  width: 80px;
+  height: 4px;
+  background: #f97316;
+  margin: 16px 0;
+}
+.theme-industrial .hero-tagline {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #f97316;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+.theme-industrial .hero-cta {
+  display: inline-block;
+  background: #f97316;
+  color: #000;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: fit-content;
+}
+.theme-industrial .hero-cta:hover {
+  background: #fb923c;
+}
+.theme-industrial .hero-reviews {
+  margin-top: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* --- Services --- */
+.theme-industrial .services {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+.theme-industrial .services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #333;
+  border: 1px solid #333;
+}
+.theme-industrial .service-card {
+  background: #1a1a1a;
+  padding: 28px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #e5e5e5;
+  transition: color 0.2s, border-color 0.2s;
+  border-left: 3px solid transparent;
+}
+.theme-industrial .service-card:hover {
+  color: #f97316;
+  border-left-color: #f97316;
+}
+
+/* --- About --- */
+.theme-industrial .about {
+  border-top: 1px solid #333;
+}
+.theme-industrial .about-content p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+  max-width: 700px;
+}
+.theme-industrial .about-tagline {
+  margin-top: 16px;
+  font-style: italic;
+  color: #888 !important;
+  font-family: 'Courier New', monospace;
+}
+
+/* --- Reviews --- */
+.theme-industrial .reviews {
+  border-top: 1px solid #333;
+}
+.theme-industrial .review-card {
+  background: #222;
+  border-left: 4px solid #f97316;
+  padding: 24px;
+  max-width: 600px;
+}
+.theme-industrial .review-stars {
+  color: #f97316;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+.theme-industrial .review-quote {
+  font-size: 1.1rem;
+  color: #ccc;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.theme-industrial .review-count {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* --- Contact --- */
+.theme-industrial .contact {
+  border-top: 1px solid #333;
+}
+.theme-industrial .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.theme-industrial .contact-row {
+  border-bottom: 1px solid #333;
+  padding: 16px 0;
+}
+.theme-industrial .contact-row strong {
+  display: block;
+  color: #f97316;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.theme-industrial .contact-row span,
+.theme-industrial .contact-row a {
+  color: #e5e5e5;
+  font-size: 0.95rem;
+}
+.theme-industrial .contact-map {
+  border: 1px solid #333;
+}
+.theme-industrial .contact-map iframe {
+  filter: grayscale(100%) invert(0.9);
+}
+
+/* --- Footer --- */
+.theme-industrial .site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.theme-industrial .footer-credit strong {
+  color: #f97316;
+}
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+  .theme-industrial .hero-inner {
+    padding: 60px 16px;
+    min-height: 60vh;
+  }
+  .theme-industrial .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .theme-industrial .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .theme-industrial .site-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
