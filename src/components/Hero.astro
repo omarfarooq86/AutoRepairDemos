@@ -1,0 +1,51 @@
+---
+export interface Shop {
+  name: string;
+  shortName: string;
+  tagline: string;
+  established: string | null;
+  municipality: string;
+}
+
+export interface ContactData {
+  phone: string;
+  displayPhone: string;
+}
+
+export interface ReviewData {
+  rating: number;
+  count: number;
+}
+
+export interface Props {
+  shop: Shop;
+  contact: Pick<ContactData, 'phone' | 'displayPhone'>;
+  reviews: Pick<ReviewData, 'rating' | 'count'>;
+  style: 'industrial' | 'modern';
+}
+
+const { shop, contact, reviews, style } = Astro.props;
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    {style === 'industrial' ? (
+      <>
+        <p class="hero-est">{shop.established ? `Est. ${shop.established}` : ''}{shop.established && shop.municipality ? ' · ' : ''}{shop.municipality}</p>
+        <h1 class="hero-name">{shop.shortName}</h1>
+        <div class="hero-line"></div>
+        <p class="hero-tagline">{shop.tagline}</p>
+      </>
+    ) : (
+      <>
+        <span class="hero-badge">★ {reviews.rating} · {reviews.count} Reviews</span>
+        <h1 class="hero-name">{shop.name}</h1>
+        <p class="hero-tagline">{shop.tagline}</p>
+      </>
+    )}
+    <a href={`tel:${contact.phone}`} class="hero-cta">Call Now — {contact.displayPhone}</a>
+    {style === 'industrial' && (
+      <p class="hero-reviews">★ {reviews.rating} ({reviews.count} reviews)</p>
+    )}
+  </div>
+</section>
