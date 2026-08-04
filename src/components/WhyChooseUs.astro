@@ -1,0 +1,80 @@
+---
+export interface Props {
+  whyChooseUs: { title: string; icon: string; description: string }[];
+  style: 'industrial' | 'modern';
+}
+
+// Emoji icons keyed by the data-file `icon` string. Unknown keys fall back
+// to a wrench so the grid never renders a blank icon.
+const ICONS: Record<string, string> = {
+  badge: '\u{1F945}',            // medal
+  parts: '\u{1F527}',            // wrench
+  inspection: '\u{1F50D}',       // magnifying glass
+  warranty: '\u{1F6E1}\u{FE0F}', // shield
+  equipment: '\u{1F6E0}\u{FE0F}',// hammer & wrench
+  pricing: '\u{1F4B0}',          // money bag
+};
+
+function getIcon(icon: string): string {
+  return ICONS[icon] ?? '\u{1F527}'; // default: wrench
+}
+
+const { whyChooseUs, style } = Astro.props;
+---
+
+<section class="why-us" id="why-us">
+  <h2 class="section-heading">Why Choose Us</h2>
+  <div class={`why-us-grid why-us-grid--${style}`}>
+    {whyChooseUs.map((item) => (
+      <div class="why-us-card">
+        <span class="why-us-icon" aria-hidden="true">{getIcon(item.icon)}</span>
+        <h3 class="why-us-title">{item.title}</h3>
+        <p class="why-us-desc">{item.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* Minimal functional layout for the why-choose-us grid. Per-demo themed
+     styling (colors, borders, hover states) is added in Tasks 14/15. Colors
+     here use the theme custom properties from global.css so the section
+     themes out of the box. */
+
+  .why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--color-border, #333);
+    border: 1px solid var(--color-border, #333);
+  }
+
+  .why-us-card {
+    background: var(--color-bg, #1a1a1a);
+    padding: 28px 20px;
+  }
+
+  .why-us-icon {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .why-us-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .why-us-desc {
+    font-size: 0.95rem;
+    color: var(--color-muted, #888);
+  }
+
+  @media (max-width: 640px) {
+    .why-us-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
