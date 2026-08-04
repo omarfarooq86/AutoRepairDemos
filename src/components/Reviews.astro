@@ -4,8 +4,6 @@ export interface Props {
   style: 'industrial' | 'modern';
 }
 
-// Minimal bridge for the v2 data schema (reviews are now an array of {name, rating, text, date} cards).
-// Task 10 replaces this component with the full enhanced version.
 const { reviews, style } = Astro.props;
 
 function stars(rating: number): string {
@@ -13,7 +11,7 @@ function stars(rating: number): string {
 }
 ---
 
-<section class="reviews">
+<section class="reviews" id="reviews">
   <h2 class="section-heading">What Our Customers Say</h2>
   <div class="reviews-grid">
     {reviews.map((review) => (
@@ -25,3 +23,57 @@ function stars(rating: number): string {
     ))}
   </div>
 </section>
+
+<style>
+  /* Minimal functional CSS for the 3-card review grid. Per-demo themed
+     styling (colors, fonts, shadows) is added in demo-1.css / demo-2.css
+     (Tasks 14/15). Colors here use the theme custom properties from
+     global.css so the section themes out of the box. */
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg, #1a1a1a);
+    border: 1px solid var(--color-border, #333);
+    padding: 24px;
+  }
+
+  .review-stars {
+    color: var(--color-accent, #f97316);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+
+  .review-quote {
+    font-size: 1.05rem;
+    color: var(--color-muted, #888);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+
+  .review-meta {
+    font-size: 0.9rem;
+    color: var(--color-muted, #888);
+    margin: 0;
+  }
+
+  .review-meta strong {
+    color: var(--color-accent, #f97316);
+  }
+
+  /* Stack to one column on mobile. */
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
