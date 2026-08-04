@@ -1,0 +1,48 @@
+---
+export interface ContactData {
+  phone: string;
+  displayPhone: string;
+  address: string;
+  hours: string;
+  mapsEmbed: string;
+}
+
+export interface Props {
+  contact: ContactData;
+  style: 'industrial' | 'modern';
+}
+
+const { contact, style } = Astro.props;
+---
+
+<section class="contact">
+  <h2 class="section-heading">Visit Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-row">
+        <strong>Address</strong>
+        <span>{contact.address}</span>
+      </div>
+      <div class="contact-row">
+        <strong>Phone</strong>
+        <a href={`tel:${contact.phone}`}>{contact.displayPhone}</a>
+      </div>
+      <div class="contact-row">
+        <strong>Hours</strong>
+        <span>{contact.hours}</span>
+      </div>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src={contact.mapsEmbed}
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title={`Map showing ${contact.address}`}
+      ></iframe>
+    </div>
+  </div>
+</section>
