@@ -1,0 +1,45 @@
+---
+export interface Props {
+  faqs: { question: string; answer: string }[];
+  style: 'industrial' | 'modern';
+}
+
+const { faqs, style } = Astro.props;
+---
+
+<!-- CSS-only accordion: native <details>/<summary> expands/collapses each
+     item with zero JavaScript. Base box styling (border, padding, +/×
+     marker, open-state divider) lives in global.css (Task 2). -->
+<section class={`faq faq--${style}`} id="faq">
+  <h2 class="section-heading">Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+    {faqs.map((item) => (
+      <details class="faq-item">
+        <summary>{item.question}</summary>
+        <div class="faq-answer">{item.answer}</div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* Minimal scoped CSS for FAQ-specific spacing only. The base
+     details/summary styling comes from global.css (Task 2): border,
+     background, radius, summary padding, and the details > *:not(summary)
+     padding rule already pad the answer div. Per-demo themed styling
+     (colors, fonts, accents) is added in demo-1.css / demo-2.css
+     (Tasks 14/15). Colors here use the theme custom properties from
+     global.css so the section themes out of the box. */
+
+  .faq-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .faq-answer {
+    color: var(--color-muted, #888);
+    line-height: 1.7;
+    max-width: 70ch;
+  }
+</style>
