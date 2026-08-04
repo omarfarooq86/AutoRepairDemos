@@ -1,0 +1,114 @@
+---
+export interface Props {
+  workProcess: { step: number; title: string; description: string }[];
+  style: 'industrial' | 'modern';
+}
+
+const { workProcess, style } = Astro.props;
+---
+
+<section class={`process process--${style}`} id="process">
+  <h2 class="section-heading">Our Process</h2>
+
+  <!-- 4-step horizontal flow. Number circles sit on a connector line drawn
+       by .process-row::before; each step is an equal-width grid column. -->
+  <div class="process-row">
+    {workProcess.map((item) => (
+      <div class="process-step">
+        <span class="step-circle">{item.step}</span>
+        <div class="step-copy">
+          <h3 class="step-title">{item.title}</h3>
+          <p class="step-desc">{item.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* Minimal functional CSS for the 4-step process flow. Per-demo themed
+     styling (colors, fonts, shadows) is added in demo-1.css / demo-2.css
+     (Tasks 14/15). Colors here use the theme custom properties from
+     global.css so the section themes out of the box. */
+
+  .process-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* Horizontal connector line — runs behind the number circles, from the
+     center of the first circle to the center of the last. The left/right
+     offsets are half of one grid track: (100% − 3 × 24px gap) / 8. */
+  .process-row::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* vertical center of the 60px circle */
+    left: calc((100% - 72px) / 8);
+    right: calc((100% - 72px) / 8);
+    height: 2px;
+    background: var(--color-border, #333);
+    z-index: 0;
+  }
+
+  .process-step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-accent, #f97316);
+    background: var(--color-bg, #1a1a1a);
+    border: 2px solid var(--color-accent, #f97316);
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .step-desc {
+    font-size: 0.95rem;
+    color: var(--color-muted, #888);
+    line-height: 1.6;
+  }
+
+  /* Stack vertically on mobile: circle inline with the text, line hidden. */
+  @media (max-width: 640px) {
+    .process-row {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .process-row::before {
+      display: none;
+    }
+    .process-step {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      gap: 16px;
+    }
+    .step-circle {
+      margin-bottom: 0;
+    }
+    .step-desc {
+      font-size: 0.9rem;
+    }
+  }
+</style>
