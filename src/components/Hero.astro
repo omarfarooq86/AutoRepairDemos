@@ -5,6 +5,13 @@ export interface Shop {
   tagline: string;
   established: string | null;
   municipality: string;
+  stats?: Array<{ label: string; value: string }>;
+}
+
+export interface HeroData {
+  headline?: string;
+  subheadline?: string;
+  badges?: string[];
 }
 
 export interface ContactData {
@@ -18,16 +25,22 @@ export interface ReviewData {
 
 export interface Props {
   shop: Shop;
+  hero?: HeroData;
   contact: Pick<ContactData, 'phone' | 'displayPhone'>;
-  reviews: ReviewData[];
+  reviews?: ReviewData[];
   style: 'industrial' | 'modern';
 }
 
-const { shop, contact, reviews, style } = Astro.props;
+const { shop, hero, contact, reviews, style } = Astro.props;
 
-// Minimal bridge for the v2 data schema (reviews are now an array of cards).
-// Task 4 replaces this component with the full enhanced version using shop.stats + hero.badges.
-const count = reviews.length;
+// Rich v2 copy from hero.headline / hero.subheadline, falling back to the
+// v1 name / tagline so the component keeps working without a `hero` prop.
+const headline = hero?.headline ?? shop.name;
+const subheadline = hero?.subheadline ?? shop.tagline;
+const badges = hero?.badges ?? [];
+const stats = shop.stats ?? [];
+
+const count = reviews?.length ?? 0;
 const avgRating = count ? reviews.reduce((sum, r) => sum + r.rating, 0) / count : 0;
 const rating = Math.round(avgRating * 10) / 10;
 ---
@@ -37,20 +50,102 @@ const rating = Math.round(avgRating * 10) / 10;
     {style === 'industrial' ? (
       <>
         <p class="hero-est">{shop.established ? `Est. ${shop.established}` : ''}{shop.established && shop.municipality ? ' · ' : ''}{shop.municipality}</p>
-        <h1 class="hero-name">{shop.shortName}</h1>
+        <h1 class="hero-name">{headline}</h1>
         <div class="hero-line"></div>
-        <p class="hero-tagline">{shop.tagline}</p>
+        <p class="hero-tagline">{subheadline}</p>
       </>
     ) : (
       <>
         <span class="hero-badge">★ {rating} · {count} Reviews</span>
-        <h1 class="hero-name">{shop.name}</h1>
-        <p class="hero-tagline">{shop.tagline}</p>
+        <h1 class="hero-name">{headline}</h1>
+        <p class="hero-tagline">{subheadline}</p>
       </>
     )}
     <a href={`tel:${contact.phone}`} class="hero-cta">Call Now — {contact.displayPhone}</a>
     {style === 'industrial' && (
       <p class="hero-reviews">★ {rating} ({count} reviews)</p>
     )}
+
+    {badges.length > 0 && (
+      <ul class="hero-badges" aria-label="Highlights">
+        {badges.map((badge) => (
+          <li class="hero-badge-pill">{badge}</li>
+        ))}
+      </ul>
+    )}
   </div>
+
+  {stats.length > 0 && (
+    <div class="hero-stats" role="list">
+      {stats.map((stat) => (
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-value">{stat.value}</span>
+          <span class="hero-stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  )}
 </section>
+
+<style>
+  /* ===== Minimal functional styling for the v2 additions =====
+     Only layout + neutral colors via theme custom properties, so both demos
+     render correctly out of the box. Themed look (orange vs blue accents,
+     borders, hover) is applied in Tasks 14/15. */
+
+  .hero-badges {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hero-badge-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--color-border, #333);
+    background: color-mix(in srgb, var(--color-bg, #fff) 70%, transparent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--color-border, #333);
+    border-top: 1px solid var(--color-border, #333);
+  }
+
+  .hero-stat {
+    background: var(--color-bg, #fff);
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .hero-stat-value {
+    display: block;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-muted, #888);
+  }
+
+  @media (max-width: 640px) {
+    .hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

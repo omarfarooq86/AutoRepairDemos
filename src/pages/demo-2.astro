@@ -10,12 +10,12 @@ import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import data from '../data/demo-2.json';
 
-const { shop, contact, services, reviews, style } = data;
+const { shop, hero, contact, services, reviews, style } = data;
 ---
 
 <Base title={shop.name} style={style}>
   <Navbar shop={shop} style={style} />
-  <Hero shop={shop} contact={contact} reviews={reviews} style={style} />
+  <Hero shop={shop} hero={hero} contact={contact} reviews={reviews} style={style} />
   <Services services={services} style={style} />
   <About shop={shop} style={style} />
   <Reviews reviews={reviews} style={style} />
