@@ -1,0 +1,25 @@
+---
+export interface Props {
+  reviews: {
+    rating: number;
+    count: number;
+    quote: string;
+  };
+  style: 'industrial' | 'modern';
+}
+
+const { reviews, style } = Astro.props;
+
+function stars(rating: number): string {
+  return '★'.repeat(Math.floor(rating)) + (rating % 1 >= 0.5 ? '½' : '');
+}
+---
+
+<section class="reviews">
+  <h2 class="section-heading">What Our Customers Say</h2>
+  <div class="review-card">
+    <div class="review-stars">{stars(reviews.rating)}</div>
+    <blockquote class="review-quote">&ldquo;{reviews.quote}&rdquo;</blockquote>
+    <p class="review-count">{reviews.rating} rating &mdash; based on {reviews.count} Google reviews</p>
+  </div>
+</section>
