@@ -1,0 +1,13 @@
+---
+export interface Props {
+  shop: { name: string };
+  style: 'industrial' | 'modern';
+}
+
+const { shop, style } = Astro.props;
+---
+
+<footer class="site-footer">
+  <span>{shop.name.toUpperCase()}</span>
+  <span class="footer-credit">by <strong>Veloxa</strong></span>
+</footer>
