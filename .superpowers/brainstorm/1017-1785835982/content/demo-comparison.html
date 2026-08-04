@@ -1,0 +1,94 @@
+<h2>Two Demo Websites — Side by Side</h2>
+<p class="subtitle">Select your preferred direction for each, or choose one to refine. Click to select a card.</p>
+
+<div class="split">
+  <!-- Demo 1: Dark Industrial -->
+  <div>
+    <div class="label" style="margin-bottom:12px;text-align:center">Demo 1 — "The Workshop"</div>
+    <div class="card" data-choice="demo1" onclick="toggleSelect(this)" style="background:#1a1a1a;color:#e5e5e5;border:1px solid #333;border-radius:0;overflow:hidden">
+      <div class="card-image" style="padding:0;background:#1a1a1a">
+        <!-- Hero -->
+        <div style="background:linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.9) 100%), url('#');background-size:cover;padding:32px 20px;border-bottom:3px solid #f97316">
+          <div style="font-family: monospace;font-size:10px;color:#f97316;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px">Est. 2018 &bull; Lahore</div>
+          <div style="font-size:28px;font-weight:900;line-height:1;text-transform:uppercase;letter-spacing:-1px;margin-bottom:4px">AL AZIZ</div>
+          <div style="font-size:14px;color:#f97316;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px">Car Restoration</div>
+          <button class="mock-button" style="background:#f97316;color:#000;font-weight:700;border:none;padding:10px 24px;text-transform:uppercase;font-size:11px;letter-spacing:1px">Call Now &mdash; 0321 4619299</button>
+        </div>
+        <!-- Services grid -->
+        <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div class="placeholder" style="background:#222;border:1px solid #333;padding:10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:1px">Engine Rebuild</div>
+          <div class="placeholder" style="background:#222;border:1px solid #333;padding:10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:1px">Body Work</div>
+          <div class="placeholder" style="background:#222;border:1px solid #333;padding:10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:1px">Restoration</div>
+          <div class="placeholder" style="background:#222;border:1px solid #333;padding:10px;text-align:center;font-size:10px;text-transform:uppercase;letter-spacing:1px">Paint</div>
+        </div>
+        <!-- Review -->
+        <div style="padding:0 20px 16px">
+          <div style="background:#222;border-left:3px solid #f97316;padding:12px">
+            <div style="font-size:11px;color:#aaa;margin-bottom:6px">&ldquo;Best restoration work in Lahore. Highly recommended.&rdquo;</div>
+            <div style="font-size:10px;color:#f97316">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 &mdash; 5 reviews</div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div style="padding:12px 20px;border-top:1px solid #333;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#666">
+          <div>AL AZIZ CAR RESTORATION</div>
+          <div>BY VELOXA</div>
+        </div>
+      </div>
+      <div class="card-body" style="color:#e5e5e5">
+        <h3 style="color:#f97316;margin-top:0">Dark Industrial</h3>
+        <p style="color:#aaa;font-size:13px">Raw workshop aesthetic. Orange safety accents. Bold condensed type. For shops that want to look <em>tough and capable</em>.</p>
+        <div style="display:flex;gap:12px;font-size:11px;margin-top:8px">
+          <span style="background:#222;padding:4px 8px;border:1px solid #333">#1a1a1a</span>
+          <span style="background:#f97316;padding:4px 8px;color:#000">#f97316</span>
+          <span style="background:#e5e5e5;padding:4px 8px;color:#000">#e5e5e5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo 2: Clean Modern -->
+  <div>
+    <div class="label" style="margin-bottom:12px;text-align:center">Demo 2 — "The Professional"</div>
+    <div class="card" data-choice="demo2" onclick="toggleSelect(this)" style="background:#fff;color:#1a1a1a;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden">
+      <div class="card-image" style="padding:0;background:#fff">
+        <!-- Hero -->
+        <div style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);padding:28px 20px;text-align:center">
+          <div style="display:inline-block;background:#fff;border-radius:100px;padding:4px 12px;font-size:10px;color:#1e40af;font-weight:500;margin-bottom:12px;border:1px solid #dbeafe">&#9733; 4.6 &bull; 13 Reviews</div>
+          <div style="font-size:24px;font-weight:700;color:#111;margin-bottom:2px;letter-spacing:-0.5px">Lahore Best</div>
+          <div style="font-size:14px;color:#64748b;margin-bottom:16px">Auto Workshop</div>
+          <button class="mock-button" style="background:#1e40af;color:#fff;font-weight:600;border:none;padding:10px 28px;border-radius:100px;font-size:12px">Call Now &mdash; 0300 4544443</button>
+        </div>
+        <!-- Services -->
+        <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#128295; Brakes</div>
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#9881; Engine</div>
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#10052; AC</div>
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#128161; Electrical</div>
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#128268; Oil Change</div>
+          <div style="text-align:center;padding:10px 6px;background:#f8fafc;border-radius:8px;border:1px solid #f1f5f9;font-size:9px;color:#334155">&#128666; Inspection</div>
+        </div>
+        <!-- Review -->
+        <div style="padding:0 20px 12px">
+          <div style="background:#fefce8;border:1px solid #fde68a;border-radius:8px;padding:12px">
+            <div style="font-size:11px;color:#713f12;margin-bottom:4px">&ldquo;Professional service, fair prices. My go-to workshop.&rdquo;</div>
+            <div style="font-size:10px;color:#1e40af">&#9733;&#9733;&#9733;&#9733;&#9733; 4.6 &mdash; 13 reviews</div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div style="padding:12px 20px;border-top:1px solid #e5e5e5;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#94a3b8">
+          <div>LAHORE BEST AUTO WORKSHOP</div>
+          <div style="color:#1e40af;font-weight:600">by Veloxa</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 style="color:#1e40af;margin-top:0">Clean Modern</h3>
+        <p style="color:#64748b;font-size:13px">Polished service-center aesthetic. Deep blue accents. Rounded cards and crisp typography. For shops that want to look <em>trustworthy and premium</em>.</p>
+        <div style="display:flex;gap:12px;font-size:11px;margin-top:8px">
+          <span style="background:#f8fafc;padding:4px 8px;border:1px solid #e5e5e5">#ffffff</span>
+          <span style="background:#1e40af;padding:4px 8px;color:#fff">#1e40af</span>
+          <span style="background:#64748b;padding:4px 8px;color:#fff">#64748b</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
