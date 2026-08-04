@@ -1,0 +1,29 @@
+{
+  "style": "industrial",
+  "shop": {
+    "name": "Al Aziz Car Restoration & Workshop",
+    "shortName": "Al Aziz",
+    "tagline": "Car Restoration",
+    "established": "2018",
+    "municipality": "Canal Bank Housing Scheme, Lahore",
+    "description": "We specialize in full vehicle restoration, body work, engine rebuilding, and custom paint jobs. With years of hands-on experience and a dedicated team of mechanics, we bring vehicles back to life — from classic rebuilds to modern collision repair. Every job gets our full attention, whether it's a full restoration or a quick touch-up."
+  },
+  "contact": {
+    "phone": "03214619299",
+    "displayPhone": "0321 4619299",
+    "address": "97-A Khuram Block, Taj Chowk, near Lahore Cantt, Lahore 54000",
+    "hours": "Open 24 hours, 7 days a week",
+    "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402!2d74.4142262!3d31.5731869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391911f5bf163fff%3A0x59d9c41824e9cb23!2sAl+Aziz+Car+Restoration+%26+Workshop!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
+  },
+  "services": [
+    "Engine Rebuild",
+    "Body Work",
+    "Restoration",
+    "Paint"
+  ],
+  "reviews": {
+    "rating": 4.8,
+    "count": 5,
+    "quote": "Best restoration work in Lahore. Highly recommended."
+  }
+}

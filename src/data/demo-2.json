@@ -1,0 +1,31 @@
+{
+  "style": "modern",
+  "shop": {
+    "name": "Lahore Best Auto Workshop",
+    "shortName": "Lahore Best Auto",
+    "tagline": "Auto Workshop",
+    "established": null,
+    "municipality": "Cantt, Lahore",
+    "description": "Your one-stop auto service center in Lahore. We offer professional brake repair, engine diagnostics, AC servicing, electrical work, oil changes, and vehicle inspections. Our experienced mechanics use modern equipment to get your vehicle running at its best. Fair prices, honest advice, and quality workmanship — that's the Lahore Best Auto promise."
+  },
+  "contact": {
+    "phone": "03004544443",
+    "displayPhone": "0300 4544443",
+    "address": "13 B, Street 06b, Walton Road, Cantt, Lahore 54000",
+    "hours": "Open 24 hours, 7 days a week",
+    "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403!2d74.3871036!3d31.493144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f19a3478909%3A0x98ba61f5771a369f!2sLahore+Best+Auto+Workshop!5e0!3m2!1sen!2s!4v1712345678902!5m2!1sen!2s"
+  },
+  "services": [
+    "Brake Repair",
+    "Engine Diagnostics",
+    "AC Service",
+    "Electrical Work",
+    "Oil Change",
+    "Vehicle Inspection"
+  ],
+  "reviews": {
+    "rating": 4.6,
+    "count": 13,
+    "quote": "Professional service, fair prices. My go-to workshop in Lahore."
+  }
+}
