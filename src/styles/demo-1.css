@@ -1,5 +1,8 @@
 /* ===== THEME: INDUSTRIAL — Demo 1 ===== */
 /* Tokens: bg #1a1a1a | accent #f97316 | text #e5e5e5 | muted #888 | border #333 */
+/* v2: covers all 11 sections — navbar, hero badges/stats, services,
+   why-choose-us, about tabs/stats, work-process, cta banner, reviews grid,
+   faq accordion, contact form, 3-column footer. */
 
 .theme-industrial {
   background: #1a1a1a;
@@ -16,6 +19,41 @@
   margin-bottom: 24px;
   padding-bottom: 12px;
   border-bottom: 2px solid #333;
+}
+
+/* --- Navbar --- */
+.theme-industrial .navbar {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+.theme-industrial .navbar-logo {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #f97316;
+  text-transform: uppercase;
+}
+.theme-industrial .navbar-logo:hover {
+  color: #fb923c;
+}
+.theme-industrial .nav-link {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+  text-transform: uppercase;
+}
+.theme-industrial .nav-link:hover {
+  color: #f97316;
+}
+.theme-industrial .nav-burger {
+  color: #e5e5e5;
+}
+.theme-industrial .nav-burger:hover {
+  color: #f97316;
+}
+.theme-industrial .nav-burger-bar {
+  background: currentColor;
 }
 
 /* --- Hero --- */
@@ -90,6 +128,42 @@
   color: #888;
 }
 
+/* Hero badges (pill row) */
+.theme-industrial .hero-badges {
+  margin-top: 24px;
+}
+.theme-industrial .hero-badges .hero-badge-pill {
+  background: #f97316;
+  border: 1px solid #f97316;
+  color: #000;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+
+/* Hero stats (counter row) */
+.theme-industrial .hero-stats {
+  background: #333;
+  border-top: 1px solid #333;
+}
+.theme-industrial .hero-stat {
+  background: #1a1a1a;
+}
+.theme-industrial .hero-stat-value {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #f97316;
+  line-height: 1;
+}
+.theme-industrial .hero-stat-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+
 /* --- Services --- */
 .theme-industrial .services {
   max-width: 1100px;
@@ -107,24 +181,98 @@
   background: #1a1a1a;
   padding: 28px 20px;
   text-align: center;
-  text-transform: uppercase;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  color: #e5e5e5;
-  transition: color 0.2s, border-color 0.2s;
   border-left: 3px solid transparent;
+  transition: border-color 0.2s;
 }
 .theme-industrial .service-card:hover {
-  color: #f97316;
   border-left-color: #f97316;
 }
+.theme-industrial .service-label {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+  transition: color 0.2s;
+}
+.theme-industrial .service-card:hover .service-label {
+  color: #f97316;
+}
+.theme-industrial .service-desc {
+  margin: 10px auto 0;
+  max-width: 34ch;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #888;
+}
 
-/* --- About --- */
+/* --- Why Choose Us --- */
+.theme-industrial .why-us-grid {
+  counter-reset: why;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #333;
+  border: 1px solid #333;
+}
+.theme-industrial .why-us-card {
+  background: #1a1a1a;
+  padding: 28px 20px;
+  counter-increment: why;
+}
+.theme-industrial .why-us-card::before {
+  content: '0' counter(why);
+  display: block;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #3a3a3a;
+  margin-bottom: 16px;
+}
+.theme-industrial .why-us-card .why-us-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #f97316;
+  background: rgba(249, 115, 22, 0.08);
+  color: #f97316;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.theme-industrial .why-us-title {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+  margin-bottom: 8px;
+}
+.theme-industrial .why-us-desc {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #888;
+}
+
+/* --- About (tabs + stats) --- */
 .theme-industrial .about {
   border-top: 1px solid #333;
 }
-.theme-industrial .about-content p {
+.theme-industrial .tab-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #888;
+}
+.theme-industrial .tab-label:hover {
+  color: #e5e5e5;
+}
+/* Active tab: accent color + underline come from the base CSS (accent var) */
+.theme-industrial .tab-panel p {
   font-size: 1rem;
   color: #ccc;
   line-height: 1.8;
@@ -136,41 +284,178 @@
   color: #888 !important;
   font-family: 'Courier New', monospace;
 }
+.theme-industrial .stats-grid {
+  gap: 16px;
+}
+.theme-industrial .stat-card {
+  border: 1px solid #333;
+  background: #1a1a1a;
+  padding: 24px 16px;
+  text-align: center;
+}
+.theme-industrial .stat-value {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #f97316;
+  line-height: 1;
+}
+.theme-industrial .stat-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #888;
+}
 
-/* --- Reviews --- */
+/* --- Work Process --- */
+.theme-industrial .process-row::before {
+  background: #333;
+}
+.theme-industrial .process-step .step-circle {
+  background: #f97316;
+  border: 2px solid #f97316;
+  color: #000;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.theme-industrial .step-copy {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 16px;
+}
+.theme-industrial .step-title {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+  margin-bottom: 8px;
+}
+.theme-industrial .step-desc {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #888;
+}
+
+/* --- CTA Banner --- */
+.theme-industrial .cta.cta--industrial {
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  background: #1a1a1a;
+}
+.theme-industrial .cta--industrial .cta-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.theme-industrial .cta--industrial .cta-heading {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+}
+.theme-industrial .cta--industrial .cta-button {
+  display: inline-block;
+  background: #f97316;
+  border: 1px solid #f97316;
+  border-radius: 0;
+  color: #000;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.theme-industrial .cta--industrial .cta-button:hover {
+  background: #fb923c;
+  opacity: 1;
+}
+
+/* --- Reviews (3-card grid) --- */
 .theme-industrial .reviews {
   border-top: 1px solid #333;
 }
-.theme-industrial .review-card {
+.theme-industrial .reviews-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.theme-industrial .reviews .review-card {
   background: #222;
+  border: 1px solid #333;
   border-left: 4px solid #f97316;
   padding: 24px;
-  max-width: 600px;
 }
 .theme-industrial .review-stars {
   color: #f97316;
   font-size: 1.2rem;
   margin-bottom: 12px;
 }
-.theme-industrial .review-quote {
-  font-size: 1.1rem;
+.theme-industrial .reviews .review-quote {
+  font-size: 1.05rem;
   color: #ccc;
   font-style: italic;
   line-height: 1.6;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
-.theme-industrial .review-count {
+.theme-industrial .review-meta {
+  font-family: 'Courier New', monospace;
   font-size: 0.8rem;
   color: #888;
 }
+.theme-industrial .review-meta strong {
+  color: #f97316;
+}
 
-/* --- Contact --- */
+/* --- FAQ --- */
+.theme-industrial .faq-list {
+  gap: 12px;
+}
+.theme-industrial .faq-item {
+  border: 1px solid #333;
+  border-radius: 0;
+  background: #1a1a1a;
+}
+.theme-industrial .faq-item summary {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: #e5e5e5;
+  transition: color 0.2s, background 0.2s;
+}
+.theme-industrial .faq-item summary:hover {
+  color: #f97316;
+  background: #222;
+}
+.theme-industrial .faq-item[open] {
+  border-color: #f97316;
+}
+.theme-industrial .faq-answer {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #888;
+}
+
+/* --- Contact (info + map + form) --- */
 .theme-industrial .contact {
   border-top: 1px solid #333;
 }
 .theme-industrial .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
 }
 .theme-industrial .contact-row {
@@ -197,41 +482,109 @@
 .theme-industrial .contact-map iframe {
   filter: grayscale(100%) invert(0.9);
 }
-
-/* --- Footer --- */
-.theme-industrial .site-footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #333;
+.theme-industrial .contact-form-title {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f97316;
+}
+.theme-industrial .contact .contact-form-label {
   font-family: 'Courier New', monospace;
-  font-size: 0.7rem;
-  color: #666;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f97316;
+}
+.theme-industrial .contact .contact-form-input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 0;
+  color: #e5e5e5;
+}
+.theme-industrial .contact-form-input::placeholder {
+  color: #888;
+  opacity: 0.7;
+}
+.theme-industrial .contact-form-input:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 1px;
+}
+
+/* --- Footer (3-column) --- */
+.theme-industrial .site-footer {
+  border-top: 1px solid #333;
+  background: #1a1a1a;
+}
+.theme-industrial .footer-heading {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #f97316;
+}
+.theme-industrial .footer-links {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+.theme-industrial .footer-links a {
+  color: #e5e5e5;
+  transition: color 0.2s;
+}
+.theme-industrial .footer-links a:hover {
+  color: #f97316;
+}
+.theme-industrial .footer-bottom {
+  border-top: 1px solid #333;
+  color: #666;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .theme-industrial .footer-credit strong {
   color: #f97316;
 }
 
 /* --- Mobile --- */
+@media (max-width: 768px) {
+  .theme-industrial .nav-links {
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+  }
+  .theme-industrial .nav-link {
+    border-top: 1px solid #333;
+  }
+}
+
 @media (max-width: 640px) {
   .theme-industrial .hero-inner {
     padding: 60px 16px;
     min-height: 60vh;
   }
+  .theme-industrial .hero-badges {
+    margin-top: 20px;
+  }
+  .theme-industrial .hero-badges .hero-badge-pill {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
   .theme-industrial .services-grid {
     grid-template-columns: 1fr;
+  }
+  .theme-industrial .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .theme-industrial .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .theme-industrial .step-copy {
+    width: auto;
+    flex: 1;
   }
   .theme-industrial .contact-grid {
     grid-template-columns: 1fr;
   }
-  .theme-industrial .site-footer {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+  .theme-industrial .footer-grid {
+    grid-template-columns: 1fr;
   }
 }
