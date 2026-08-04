@@ -6,14 +6,45 @@
   padding: 0;
 }
 
+/* ===== Theme Custom Properties ===== */
+:root {
+  --color-bg: #ffffff;
+  --color-accent: #1e40af;
+  --color-text: #111827;
+  --color-muted: #64748b;
+  --color-border: #e5e7eb;
+}
+
+/* Demo 1 — Industrial (bg #1a1a1a | accent #f97316 | text #e5e5e5 | muted #888 | border #333) */
+.theme-industrial {
+  --color-bg: #1a1a1a;
+  --color-accent: #f97316;
+  --color-text: #e5e5e5;
+  --color-muted: #888888;
+  --color-border: #333333;
+}
+
+/* Demo 2 — Modern (bg #ffffff | accent #1e40af | text #111827 | muted #64748b) */
+.theme-modern {
+  --color-bg: #ffffff;
+  --color-accent: #1e40af;
+  --color-text: #111827;
+  --color-muted: #64748b;
+  --color-border: #e5e7eb;
+}
+
 html {
   scroll-behavior: smooth;
+  /* offset anchor jumps so the sticky navbar doesn't cover section tops */
+  scroll-padding-top: 80px;
 }
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 img {
@@ -24,6 +55,67 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ===== Base Nav Reset ===== */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ===== FAQ Accordion Base (details/summary) ===== */
+details {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border-radius: 4px;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 16px 48px 16px 20px;
+  font-weight: 600;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '+';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--color-border);
+}
+
+details > *:not(summary) {
+  padding: 16px 20px;
 }
 
 section {

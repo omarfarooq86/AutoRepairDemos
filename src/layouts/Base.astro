@@ -4,9 +4,13 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   style: 'industrial' | 'modern';
+  description?: string;
 }
 
-const { title, style } = Astro.props;
+const { title, style, description } = Astro.props;
+
+const pageTitle = `${title} | Auto Workshop`;
+const metaDescription = description ?? title;
 ---
 
 <!DOCTYPE html>
@@ -14,7 +18,11 @@ const { title, style } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Auto Workshop</title>
+    <title>{pageTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class={`theme-${style}`}>
