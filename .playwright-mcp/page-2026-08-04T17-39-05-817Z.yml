@@ -1,0 +1,250 @@
+- generic [active] [ref=f11e1]:
+  - navigation "Primary navigation" [ref=f11e2]:
+    - generic [ref=f11e3]:
+      - link "Lahore Best Auto" [ref=f11e4] [cursor=pointer]:
+        - /url: "#top"
+      - generic "Toggle navigation menu" [ref=f11e5] [cursor=pointer]
+  - generic [ref=f11e9]:
+    - generic [ref=f11e10]:
+      - generic [ref=f11e11]: ★ 4.7 · 3 Reviews
+      - heading "Lahore's Reliable One-Stop Auto Workshop" [level=1] [ref=f11e12]
+      - paragraph [ref=f11e13]: Brake repair, engine diagnostics, AC service, electrical work, and more — all under one roof, done right the first time at a fair price.
+      - link "Call Now — 0300 4544443" [ref=f11e14] [cursor=pointer]:
+        - /url: tel:03004544443
+      - list "Highlights" [ref=f11e15]:
+        - listitem [ref=f11e16]: 24/7 Service
+        - listitem [ref=f11e17]: Fair Pricing
+        - listitem [ref=f11e18]: Free Inspection
+    - list [ref=f11e19]:
+      - listitem [ref=f11e20]:
+        - generic [ref=f11e21]: 10+
+        - generic [ref=f11e22]: Years Experience
+      - listitem [ref=f11e23]:
+        - generic [ref=f11e24]: 8,000+
+        - generic [ref=f11e25]: Cars Serviced
+      - listitem [ref=f11e26]:
+        - generic [ref=f11e27]: "9"
+        - generic [ref=f11e28]: Team Members
+      - listitem [ref=f11e29]:
+        - generic [ref=f11e30]: 4.6★
+        - generic [ref=f11e31]: Google Rating
+  - generic [ref=f11e32]:
+    - heading "Our Services" [level=2] [ref=f11e33]
+    - generic [ref=f11e34]:
+      - generic [ref=f11e35]:
+        - generic [ref=f11e36]: 🛠️
+        - heading "Brake Repair" [level=3] [ref=f11e37]
+        - paragraph [ref=f11e38]: Pads, discs, drums, and full brake system overhauls. We replace worn components with quality parts and road-test every brake job so you stop safely, every time.
+      - generic [ref=f11e39]:
+        - generic [ref=f11e40]: 🔍
+        - heading "Engine Diagnostics" [level=3] [ref=f11e41]
+        - paragraph [ref=f11e42]: Computerised engine scanning to pin down warning lights, rough idling, and performance issues fast. We find the real problem — not just the symptom.
+      - generic [ref=f11e43]:
+        - generic [ref=f11e44]: ❄️
+        - heading "AC Service" [level=3] [ref=f11e45]
+        - paragraph [ref=f11e46]: AC recharge, leak detection, and compressor or condenser replacement. We make sure your air conditioning blows cold and stays reliable through Lahore's summer.
+      - generic [ref=f11e47]:
+        - generic [ref=f11e48]: 💡
+        - heading "Electrical Work" [level=3] [ref=f11e49]
+        - paragraph [ref=f11e50]: Alternator, starter, wiring, and lighting repairs for all makes and models. From a dead battery to full electrical fault-finding, we've got you covered.
+      - generic [ref=f11e51]:
+        - generic [ref=f11e52]: 🛢️
+        - heading "Oil Change" [level=3] [ref=f11e53]
+        - paragraph [ref=f11e54]: Quick, professional engine oil and filter changes using the right grade of oil for your car, keeping your engine protected between services.
+      - generic [ref=f11e55]:
+        - generic [ref=f11e56]: 🔍
+        - heading "Vehicle Inspection" [level=3] [ref=f11e57]
+        - paragraph [ref=f11e58]: Pre-purchase and pre-travel inspections covering brakes, suspension, fluids, tyres, and electronics — with a plain-language report on the car's real condition.
+  - generic [ref=f11e59]:
+    - heading "Why Choose Us" [level=2] [ref=f11e60]
+    - generic [ref=f11e61]:
+      - generic [ref=f11e62]:
+        - generic [ref=f11e63]: 🥅
+        - heading "Experienced Mechanics" [level=3] [ref=f11e64]
+        - paragraph [ref=f11e65]: Certified technicians with over a decade of combined experience across Japanese, European, and Korean vehicles.
+      - generic [ref=f11e66]:
+        - generic [ref=f11e67]: 🛠️
+        - heading "Modern Equipment" [level=3] [ref=f11e68]
+        - paragraph [ref=f11e69]: Computerised diagnostics, professional AC machines, and the right tools for every job — so repairs are done accurately the first time.
+      - generic [ref=f11e70]:
+        - generic [ref=f11e71]: 💰
+        - heading "Transparent Pricing" [level=3] [ref=f11e72]
+        - paragraph [ref=f11e73]: You approve a written quote before any work starts. No surprise charges and no unnecessary repairs — just honest advice.
+      - generic [ref=f11e74]:
+        - generic [ref=f11e75]: 🔧
+        - heading "Genuine & Quality Parts" [level=3] [ref=f11e76]
+        - paragraph [ref=f11e77]: We fit original and trusted aftermarket parts sourced from authorised suppliers, and back major work with a warranty.
+  - generic [ref=f11e78]:
+    - heading "About Lahore Best Auto" [level=2] [ref=f11e79]
+    - generic [ref=f11e80]:
+      - radio "About Us" [checked]
+      - radio "Our Mission"
+      - radio "Our Vision"
+      - generic [ref=f11e81]:
+        - generic [ref=f11e82] [cursor=pointer]: About Us
+        - generic [ref=f11e83] [cursor=pointer]: Our Mission
+        - generic [ref=f11e84] [cursor=pointer]: Our Vision
+      - generic [ref=f11e86]:
+        - paragraph [ref=f11e87]: Your one-stop auto service center in Lahore. We offer professional brake repair, engine diagnostics, AC servicing, electrical work, oil changes, and vehicle inspections. Our experienced mechanics use modern equipment to get your vehicle running at its best. Fair prices, honest advice, and quality workmanship — that's the Lahore Best Auto promise.
+        - paragraph [ref=f11e88]: We take pride in every vehicle that rolls through our doors. Quality service, transparent pricing, and a team that cares about your car as much as you do.
+    - generic [ref=f11e89]:
+      - generic [ref=f11e90]:
+        - generic [ref=f11e91]: 10+
+        - generic [ref=f11e92]: Years Experience
+      - generic [ref=f11e93]:
+        - generic [ref=f11e94]: 8,000+
+        - generic [ref=f11e95]: Cars Serviced
+      - generic [ref=f11e96]:
+        - generic [ref=f11e97]: "9"
+        - generic [ref=f11e98]: Team Members
+      - generic [ref=f11e99]:
+        - generic [ref=f11e100]: 4.6★
+        - generic [ref=f11e101]: Google Rating
+  - generic [ref=f11e102]:
+    - heading "Our Process" [level=2] [ref=f11e103]
+    - generic [ref=f11e104]:
+      - generic [ref=f11e105]:
+        - generic [ref=f11e106]: "1"
+        - generic [ref=f11e107]:
+          - heading "Diagnose" [level=3] [ref=f11e108]
+          - paragraph [ref=f11e109]: Our technicians run a full computerised and mechanical check to identify the exact cause of the problem — fast and accurate.
+      - generic [ref=f11e110]:
+        - generic [ref=f11e111]: "2"
+        - generic [ref=f11e112]:
+          - heading "Plan" [level=3] [ref=f11e113]
+          - paragraph [ref=f11e114]: We share a written estimate with a clear breakdown of parts and labour. You approve the plan before we touch your vehicle.
+      - generic [ref=f11e115]:
+        - generic [ref=f11e116]: "3"
+        - generic [ref=f11e117]:
+          - heading "Repair" [level=3] [ref=f11e118]
+          - paragraph [ref=f11e119]: Our mechanics carry out the approved work using quality parts and tested procedures, keeping you updated along the way.
+      - generic [ref=f11e120]:
+        - generic [ref=f11e121]: "4"
+        - generic [ref=f11e122]:
+          - heading "Deliver" [level=3] [ref=f11e123]
+          - paragraph [ref=f11e124]: We quality-check, road-test, and clean your vehicle before handover, then explain everything that was done in plain language.
+  - generic [ref=f11e126]:
+    - heading "Ready to Get Your Car Serviced?" [level=2] [ref=f11e127]
+    - link "Call Now — 0300 4544443" [ref=f11e128] [cursor=pointer]:
+      - /url: tel:03004544443
+  - generic [ref=f11e129]:
+    - heading "What Our Customers Say" [level=2] [ref=f11e130]
+    - generic [ref=f11e131]:
+      - generic [ref=f11e132]:
+        - generic [ref=f11e133]: ★★★★★
+        - blockquote [ref=f11e134]: “Very professional and honest. They diagnosed an issue two other workshops couldn't find and fixed it at a fair price. Will definitely be coming back.”
+        - paragraph [ref=f11e135]:
+          - strong [ref=f11e136]: Muhammad Imran
+          - text: — 18 Feb 2026
+      - generic [ref=f11e137]:
+        - generic [ref=f11e138]: ★★★★
+        - blockquote [ref=f11e139]: “Got my AC serviced and a new alternator fitted. The service was quick, the price matched the quote, and the car has been running perfectly since.”
+        - paragraph [ref=f11e140]:
+          - strong [ref=f11e141]: Fatima Noor
+          - text: — 9 Apr 2026
+      - generic [ref=f11e142]:
+        - generic [ref=f11e143]: ★★★★★
+        - blockquote [ref=f11e144]: “Took my car for a pre-travel inspection before a long road trip. They were thorough and flagged a tyre issue that could have been dangerous. Highly recommended.”
+        - paragraph [ref=f11e145]:
+          - strong [ref=f11e146]: Hamza Sheikh
+          - text: — 27 Jun 2026
+  - generic [ref=f11e147]:
+    - heading "Frequently Asked Questions" [level=2] [ref=f11e148]
+    - generic [ref=f11e149]:
+      - group [ref=f11e150]:
+        - generic "How much does a car service cost? +" [ref=f11e151] [cursor=pointer]
+      - group [ref=f11e152]:
+        - generic "Do you provide pick-up and drop-off? +" [ref=f11e153] [cursor=pointer]
+      - group [ref=f11e154]:
+        - generic "Can you fix an issue that other workshops couldn't diagnose? +" [ref=f11e155] [cursor=pointer]
+      - group [ref=f11e156]:
+        - generic "Do you use original parts? +" [ref=f11e157] [cursor=pointer]
+      - group [ref=f11e158]:
+        - generic "How long does a typical repair take? +" [ref=f11e159] [cursor=pointer]
+      - group [ref=f11e160]:
+        - generic "Are your prices fixed, or do they change after the work? +" [ref=f11e161] [cursor=pointer]
+  - generic [ref=f11e162]:
+    - heading "Visit Us" [level=2] [ref=f11e163]
+    - generic [ref=f11e164]:
+      - generic [ref=f11e165]:
+        - generic [ref=f11e166]:
+          - strong [ref=f11e167]: Address
+          - text: 13 B, Street 06b, Walton Road, Cantt, Lahore 54000
+        - generic [ref=f11e168]:
+          - strong [ref=f11e169]: Phone
+          - link "0300 4544443" [ref=f11e170] [cursor=pointer]:
+            - /url: tel:03004544443
+        - generic [ref=f11e171]:
+          - strong [ref=f11e172]: Hours
+          - text: Open 24 hours, 7 days a week
+      - iframe [ref=f11e174]
+      - generic [ref=f11e175]:
+        - heading "Send Us a Message" [level=3] [ref=f11e176]
+        - generic [ref=f11e177]:
+          - generic [ref=f11e178]: Name
+          - textbox "Name" [ref=f11e179]:
+            - /placeholder: Your name
+        - generic [ref=f11e180]:
+          - generic [ref=f11e181]: Phone
+          - textbox "Phone" [ref=f11e182]:
+            - /placeholder: Your phone number
+        - generic [ref=f11e183]:
+          - generic [ref=f11e184]: Message
+          - textbox "Message" [ref=f11e185]:
+            - /placeholder: How can we help?
+  - contentinfo [ref=f11e186]:
+    - generic [ref=f11e187]:
+      - generic [ref=f11e188]:
+        - heading "Quick Links" [level=3] [ref=f11e189]
+        - list [ref=f11e190]:
+          - listitem [ref=f11e191]:
+            - link "Services" [ref=f11e192] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e193]:
+            - link "About" [ref=f11e194] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=f11e195]:
+            - link "Process" [ref=f11e196] [cursor=pointer]:
+              - /url: "#process"
+          - listitem [ref=f11e197]:
+            - link "Reviews" [ref=f11e198] [cursor=pointer]:
+              - /url: "#reviews"
+          - listitem [ref=f11e199]:
+            - link "FAQ" [ref=f11e200] [cursor=pointer]:
+              - /url: "#faq"
+          - listitem [ref=f11e201]:
+            - link "Contact" [ref=f11e202] [cursor=pointer]:
+              - /url: "#contact"
+      - generic [ref=f11e203]:
+        - heading "Our Services" [level=3] [ref=f11e204]
+        - list [ref=f11e205]:
+          - listitem [ref=f11e206]:
+            - link "Brake Repair" [ref=f11e207] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e208]:
+            - link "Engine Diagnostics" [ref=f11e209] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e210]:
+            - link "AC Service" [ref=f11e211] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e212]:
+            - link "Electrical Work" [ref=f11e213] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e214]:
+            - link "Oil Change" [ref=f11e215] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f11e216]:
+            - link "Vehicle Inspection" [ref=f11e217] [cursor=pointer]:
+              - /url: "#services"
+      - generic [ref=f11e218]:
+        - heading "Contact" [level=3] [ref=f11e219]
+        - list [ref=f11e220]:
+          - listitem [ref=f11e221]:
+            - link "0300 4544443" [ref=f11e222] [cursor=pointer]:
+              - /url: tel:03004544443
+          - listitem [ref=f11e223]: Open 24 hours, 7 days a week
+    - generic [ref=f11e224]:
+      - generic [ref=f11e225]: © 2026 Lahore Best Auto Workshop. All rights reserved.
+      - generic [ref=f11e226]:
+        - text: Built by
+        - strong [ref=f11e227]: Veloxa

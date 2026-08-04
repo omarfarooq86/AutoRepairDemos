@@ -1,0 +1,233 @@
+- generic [active] [ref=f23e1]:
+  - navigation "Primary navigation" [ref=f23e2]:
+    - generic [ref=f23e3]:
+      - link "Al Aziz" [ref=f23e4] [cursor=pointer]:
+        - /url: "#top"
+      - generic "Toggle navigation menu" [ref=f23e5] [cursor=pointer]
+  - generic [ref=f23e9]:
+    - generic [ref=f23e10]:
+      - paragraph [ref=f23e11]: Est. 2018 · Canal Bank Housing Scheme, Lahore
+      - heading "Lahore's Trusted Car Restoration Experts" [level=1] [ref=f23e12]
+      - paragraph [ref=f23e14]: From classic rebuilds to modern collision repair — precision body work, engine rebuilding, and custom paint that bring your vehicle back to life.
+      - link "Call Now — 0321 4619299" [ref=f23e15] [cursor=pointer]:
+        - /url: tel:03214619299
+      - paragraph [ref=f23e16]: ★ 4.7 (3 reviews)
+      - list "Highlights" [ref=f23e17]:
+        - listitem [ref=f23e18]: 24/7 Service
+        - listitem [ref=f23e19]: Genuine Parts
+        - listitem [ref=f23e20]: Free Inspection
+    - list [ref=f23e21]:
+      - listitem [ref=f23e22]:
+        - generic [ref=f23e23]: 8+
+        - generic [ref=f23e24]: Years Experience
+      - listitem [ref=f23e25]:
+        - generic [ref=f23e26]: 1,200+
+        - generic [ref=f23e27]: Cars Restored
+      - listitem [ref=f23e28]:
+        - generic [ref=f23e29]: "12"
+        - generic [ref=f23e30]: Team Members
+      - listitem [ref=f23e31]:
+        - generic [ref=f23e32]: 4.8★
+        - generic [ref=f23e33]: Google Rating
+  - generic [ref=f23e34]:
+    - heading "Our Services" [level=2] [ref=f23e35]
+    - generic [ref=f23e36]:
+      - generic [ref=f23e37]:
+        - heading "Engine Rebuild" [level=3] [ref=f23e38]
+        - paragraph [ref=f23e39]: Complete engine overhaul and rebuilding for petrol, diesel, and CNG vehicles. We strip, inspect, and machine every component to factory tolerance so your engine runs smoother and lasts longer.
+      - generic [ref=f23e40]:
+        - heading "Body Work" [level=3] [ref=f23e41]
+        - paragraph [ref=f23e42]: Dent removal, panel beating, welding, and full body alignment. Whether it's a minor fender bender or serious collision damage, our panel beaters bring your car's frame back to true.
+      - generic [ref=f23e43]:
+        - heading "Restoration" [level=3] [ref=f23e44]
+        - paragraph [ref=f23e45]: Full classic and vintage car restoration — from bare-metal stripping to showroom finish. We source original parts and preserve the character of your vehicle.
+      - generic [ref=f23e46]:
+        - heading "Custom Paint" [level=3] [ref=f23e47]
+        - paragraph [ref=f23e48]: Spray painting, metallic, and two-tone finishes using quality imported paints. Our spray booth delivers a flawless, durable finish with rust protection baked in.
+  - generic [ref=f23e49]:
+    - heading "Why Choose Us" [level=2] [ref=f23e50]
+    - generic [ref=f23e51]:
+      - generic [ref=f23e52]:
+        - generic [ref=f23e53]: 🥅
+        - heading "Certified Mechanics" [level=3] [ref=f23e54]
+        - paragraph [ref=f23e55]: A team trained and certified in modern engine and body repair techniques, with years of hands-on experience on both classic and modern vehicles.
+      - generic [ref=f23e56]:
+        - generic [ref=f23e57]: 🔧
+        - heading "Genuine Parts" [level=3] [ref=f23e58]
+        - paragraph [ref=f23e59]: We only fit original and high-grade parts. No cheap imitations — because the quality of a repair depends on the quality of the parts we install.
+      - generic [ref=f23e60]:
+        - generic [ref=f23e61]: 🔍
+        - heading "Free Inspection" [level=3] [ref=f23e62]
+        - paragraph [ref=f23e63]: Bring your car in for a thorough inspection and an honest assessment. If a repair isn't worth the cost, we'll tell you straight.
+      - generic [ref=f23e64]:
+        - generic [ref=f23e65]: 🛡️
+        - heading "12-Month Warranty" [level=3] [ref=f23e66]
+        - paragraph [ref=f23e67]: Every restoration and major repair is backed by a workmanship warranty of up to 12 months. If anything goes wrong, we make it right at no extra cost.
+  - generic [ref=f23e68]:
+    - heading "About Al Aziz" [level=2] [ref=f23e69]
+    - generic [ref=f23e70]:
+      - radio "About Us" [checked]
+      - radio "Our Mission"
+      - radio "Our Vision"
+      - generic [ref=f23e71]:
+        - generic [ref=f23e72] [cursor=pointer]: About Us
+        - generic [ref=f23e73] [cursor=pointer]: Our Mission
+        - generic [ref=f23e74] [cursor=pointer]: Our Vision
+      - generic [ref=f23e76]:
+        - paragraph [ref=f23e77]: We specialize in full vehicle restoration, body work, engine rebuilding, and custom paint jobs. With years of hands-on experience and a dedicated team of mechanics, we bring vehicles back to life — from classic rebuilds to modern collision repair. Every job gets our full attention, whether it's a full restoration or a quick touch-up.
+        - paragraph [ref=f23e78]: We take pride in every vehicle that rolls through our doors. No shortcuts, no excuses — just honest work.
+    - generic [ref=f23e79]:
+      - generic [ref=f23e80]:
+        - generic [ref=f23e81]: 8+
+        - generic [ref=f23e82]: Years Experience
+      - generic [ref=f23e83]:
+        - generic [ref=f23e84]: 1,200+
+        - generic [ref=f23e85]: Cars Restored
+      - generic [ref=f23e86]:
+        - generic [ref=f23e87]: "12"
+        - generic [ref=f23e88]: Team Members
+      - generic [ref=f23e89]:
+        - generic [ref=f23e90]: 4.8★
+        - generic [ref=f23e91]: Google Rating
+  - generic [ref=f23e92]:
+    - heading "Our Process" [level=2] [ref=f23e93]
+    - generic [ref=f23e94]:
+      - generic [ref=f23e95]:
+        - generic [ref=f23e96]: "1"
+        - generic [ref=f23e97]:
+          - heading "Diagnose" [level=3] [ref=f23e98]
+          - paragraph [ref=f23e99]: We inspect your vehicle inside and out, run a full mechanical check, and identify every issue so you know exactly what needs to be done.
+      - generic [ref=f23e100]:
+        - generic [ref=f23e101]: "2"
+        - generic [ref=f23e102]:
+          - heading "Plan" [level=3] [ref=f23e103]
+          - paragraph [ref=f23e104]: You get a clear, itemised plan with an honest quote. We agree on scope, timeline, and budget before any work begins — no surprises.
+      - generic [ref=f23e105]:
+        - generic [ref=f23e106]: "3"
+        - generic [ref=f23e107]:
+          - heading "Restore" [level=3] [ref=f23e108]
+          - paragraph [ref=f23e109]: Our mechanics and body specialists carry out the work with precision — engine, body, and paint — keeping you updated at every stage.
+      - generic [ref=f23e110]:
+        - generic [ref=f23e111]: "4"
+        - generic [ref=f23e112]:
+          - heading "Deliver" [level=3] [ref=f23e113]
+          - paragraph [ref=f23e114]: We road-test every vehicle and run a final quality check before handing back the keys, along with a record of the work done.
+  - generic [ref=f23e116]:
+    - heading "Ready to Get Your Car Serviced?" [level=2] [ref=f23e117]
+    - link "Call Now — 0321 4619299" [ref=f23e118] [cursor=pointer]:
+      - /url: tel:03214619299
+  - generic [ref=f23e119]:
+    - heading "What Our Customers Say" [level=2] [ref=f23e120]
+    - generic [ref=f23e121]:
+      - generic [ref=f23e122]:
+        - generic [ref=f23e123]: ★★★★★
+        - blockquote [ref=f23e124]: “Had my 1995 Corolla completely restored by Al Aziz. The paint job is flawless and the engine runs like new. These guys genuinely care about the work they do.”
+        - paragraph [ref=f23e125]:
+          - strong [ref=f23e126]: Ahmed Raza
+          - text: — 12 Mar 2026
+      - generic [ref=f23e127]:
+        - generic [ref=f23e128]: ★★★★★
+        - blockquote [ref=f23e129]: “After an accident damaged my Civic's body, they rebuilt it better than before. Honest pricing, and they finished a day earlier than promised.”
+        - paragraph [ref=f23e130]:
+          - strong [ref=f23e131]: Bilal Hussain
+          - text: — 22 May 2026
+      - generic [ref=f23e132]:
+        - generic [ref=f23e133]: ★★★★
+        - blockquote [ref=f23e134]: “Professional workshop with a proper spray booth. It took a little longer than quoted on my Suzuki Mehran, but the finish is worth the wait.”
+        - paragraph [ref=f23e135]:
+          - strong [ref=f23e136]: Usman Tariq
+          - text: — 3 Jul 2026
+  - generic [ref=f23e137]:
+    - heading "Frequently Asked Questions" [level=2] [ref=f23e138]
+    - generic [ref=f23e139]:
+      - group [ref=f23e140]:
+        - generic "How long does a full car restoration take? +" [ref=f23e141] [cursor=pointer]
+      - group [ref=f23e142]:
+        - generic "Do you work on all car brands and models? +" [ref=f23e143] [cursor=pointer]
+      - group [ref=f23e144]:
+        - generic "What type of paint do you use, and how long does it last? +" [ref=f23e145] [cursor=pointer]
+      - group [ref=f23e146]:
+        - generic "Is the 12-month warranty really included in the price? +" [ref=f23e147] [cursor=pointer]
+      - group [ref=f23e148]:
+        - generic "Do I need to book an appointment, or can I just drop in? +" [ref=f23e149] [cursor=pointer]
+      - group [ref=f23e150]:
+        - generic "Can you restore a car that has been sitting for many years? +" [ref=f23e151] [cursor=pointer]
+  - generic [ref=f23e152]:
+    - heading "Visit Us" [level=2] [ref=f23e153]
+    - generic [ref=f23e154]:
+      - generic [ref=f23e155]:
+        - generic [ref=f23e156]:
+          - strong [ref=f23e157]: Address
+          - text: 97-A Khuram Block, Taj Chowk, near Lahore Cantt, Lahore 54000
+        - generic [ref=f23e158]:
+          - strong [ref=f23e159]: Phone
+          - link "0321 4619299" [ref=f23e160] [cursor=pointer]:
+            - /url: tel:03214619299
+        - generic [ref=f23e161]:
+          - strong [ref=f23e162]: Hours
+          - text: Open 24 hours, 7 days a week
+      - iframe [ref=f23e164]
+      - generic [ref=f23e165]:
+        - heading "Send Us a Message" [level=3] [ref=f23e166]
+        - generic [ref=f23e167]:
+          - generic [ref=f23e168]: Name
+          - textbox "Name" [ref=f23e169]:
+            - /placeholder: Your name
+        - generic [ref=f23e170]:
+          - generic [ref=f23e171]: Phone
+          - textbox "Phone" [ref=f23e172]:
+            - /placeholder: Your phone number
+        - generic [ref=f23e173]:
+          - generic [ref=f23e174]: Message
+          - textbox "Message" [ref=f23e175]:
+            - /placeholder: How can we help?
+  - contentinfo [ref=f23e176]:
+    - generic [ref=f23e177]:
+      - generic [ref=f23e178]:
+        - heading "Quick Links" [level=3] [ref=f23e179]
+        - list [ref=f23e180]:
+          - listitem [ref=f23e181]:
+            - link "Services" [ref=f23e182] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f23e183]:
+            - link "About" [ref=f23e184] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=f23e185]:
+            - link "Process" [ref=f23e186] [cursor=pointer]:
+              - /url: "#process"
+          - listitem [ref=f23e187]:
+            - link "Reviews" [ref=f23e188] [cursor=pointer]:
+              - /url: "#reviews"
+          - listitem [ref=f23e189]:
+            - link "FAQ" [ref=f23e190] [cursor=pointer]:
+              - /url: "#faq"
+          - listitem [ref=f23e191]:
+            - link "Contact" [ref=f23e192] [cursor=pointer]:
+              - /url: "#contact"
+      - generic [ref=f23e193]:
+        - heading "Our Services" [level=3] [ref=f23e194]
+        - list [ref=f23e195]:
+          - listitem [ref=f23e196]:
+            - link "Engine Rebuild" [ref=f23e197] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f23e198]:
+            - link "Body Work" [ref=f23e199] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f23e200]:
+            - link "Restoration" [ref=f23e201] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=f23e202]:
+            - link "Custom Paint" [ref=f23e203] [cursor=pointer]:
+              - /url: "#services"
+      - generic [ref=f23e204]:
+        - heading "Contact" [level=3] [ref=f23e205]
+        - list [ref=f23e206]:
+          - listitem [ref=f23e207]:
+            - link "0321 4619299" [ref=f23e208] [cursor=pointer]:
+              - /url: tel:03214619299
+          - listitem [ref=f23e209]: Open 24 hours, 7 days a week
+    - generic [ref=f23e210]:
+      - generic [ref=f23e211]: © 2026 Al Aziz Car Restoration & Workshop. All rights reserved.
+      - generic [ref=f23e212]:
+        - text: Built by
+        - strong [ref=f23e213]: Veloxa

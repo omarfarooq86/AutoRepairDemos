@@ -5,6 +5,7 @@ export interface Props {
 }
 
 const { reviews, style } = Astro.props;
+const total = reviews.length;
 
 function stars(rating: number): string {
   return '★'.repeat(Math.floor(rating)) + (rating % 1 >= 0.5 ? '½' : '');
@@ -13,9 +14,15 @@ function stars(rating: number): string {
 
 <section class="reviews" id="reviews">
   <h2 class="section-heading">What Our Customers Say</h2>
-  <div class="reviews-grid">
-    {reviews.map((review) => (
-      <div class="review-card">
+  <div class="reviews-carousel" role="region" aria-label="Customer reviews" aria-roledescription="carousel">
+    {reviews.map((review, i) => (
+      <div
+        class="review-card"
+        style={`--carousel-index: ${i}; --carousel-total: ${total};`}
+        role="group"
+        aria-roledescription="slide"
+        aria-label={`Review ${i + 1} of ${total}`}
+      >
         <div class="review-stars">{stars(review.rating)}</div>
         <blockquote class="review-quote">&ldquo;{review.text}&rdquo;</blockquote>
         <p class="review-meta"><strong>{review.name}</strong> &mdash; {review.date}</p>
@@ -25,23 +32,71 @@ function stars(rating: number): string {
 </section>
 
 <style>
-  /* Minimal functional CSS for the 3-card review grid. Per-demo themed
-     styling (colors, fonts, shadows) is added in demo-1.css / demo-2.css
-     (Tasks 14/15). Colors here use the theme custom properties from
-     global.css so the section themes out of the box. */
+  /* ===== CSS-Only Review Carousel =====
+     Uses keyframe animation with staggered delays.
+     Each card is visible for ~28% of the cycle, then slides out.
+     Cards share the same animation with delay offsets.
+     Pause on hover via animation-play-state. */
 
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  .reviews-carousel {
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
   }
 
   .review-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(40px);
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     background: var(--color-bg, #1a1a1a);
     border: 1px solid var(--color-border, #333);
-    padding: 24px;
+    padding: 28px;
+    animation: reviewCycle calc(var(--carousel-total, 3) * 5s) ease-in-out infinite;
+    animation-delay: calc(var(--carousel-index, 0) * 5s);
+  }
+
+  .review-card:hover ~ .review-card,
+  .reviews-carousel:hover .review-card {
+    animation-play-state: paused;
+  }
+
+  @keyframes reviewCycle {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    4% {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      z-index: 2;
+    }
+    28% {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      z-index: 2;
+    }
+    33% {
+      opacity: 0;
+      transform: translateX(-30px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-30px);
+      pointer-events: none;
+      z-index: 0;
+    }
   }
 
   .review-stars {
@@ -70,10 +125,25 @@ function stars(rating: number): string {
     color: var(--color-accent, #f97316);
   }
 
-  /* Stack to one column on mobile. */
+  /* Reduced motion: show all cards stacked without animation */
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-carousel {
+      overflow: visible;
+    }
+    .review-card {
+      position: static;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      animation: none;
+      margin-bottom: 16px;
+      z-index: auto;
+    }
+  }
+
   @media (max-width: 768px) {
-    .reviews-grid {
-      grid-template-columns: 1fr;
+    .reviews-carousel {
+      min-height: 220px;
     }
   }
 </style>

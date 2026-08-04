@@ -73,6 +73,73 @@
     linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,26,0.95) 100%),
     url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80') center/cover no-repeat;
   position: relative;
+  overflow: hidden;
+}
+
+/* Floating gear background (industrial only) */
+.theme-industrial .hero-gears {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.theme-industrial .hero-gear {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px dashed rgba(249, 115, 22, 0.12);
+  animation: gearSpin 40s linear infinite;
+}
+.theme-industrial .hero-gear::after {
+  content: '';
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  border: 1px solid rgba(249, 115, 22, 0.08);
+}
+.theme-industrial .hero-gear--1 {
+  width: 140px; height: 140px;
+  top: 10%; left: -60px;
+  animation-duration: 35s;
+}
+.theme-industrial .hero-gear--2 {
+  width: 90px; height: 90px;
+  top: 55%; right: -30px;
+  animation-duration: 45s;
+  animation-direction: reverse;
+}
+.theme-industrial .hero-gear--3 {
+  width: 180px; height: 180px;
+  bottom: 0%; left: 15%;
+  animation-duration: 52s;
+  opacity: 0.5;
+}
+.theme-industrial .hero-gear--4 {
+  width: 70px; height: 70px;
+  top: 35%; right: 25%;
+  animation-duration: 28s;
+  animation-direction: reverse;
+  opacity: 0.6;
+}
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Ensure hero text sits above gears */
+.theme-industrial .hero-est,
+.theme-industrial .hero-name,
+.theme-industrial .hero-line,
+.theme-industrial .hero-tagline,
+.theme-industrial .hero-cta,
+.theme-industrial .hero-reviews,
+.theme-industrial .hero-badges {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-industrial .hero-gear {
+    animation: none;
+  }
 }
 .theme-industrial .hero-est {
   font-family: 'Courier New', monospace;
@@ -385,19 +452,18 @@
   opacity: 1;
 }
 
-/* --- Reviews (3-card grid) --- */
+/* --- Reviews (CSS-only carousel) --- */
 .theme-industrial .reviews {
   border-top: 1px solid #333;
 }
-.theme-industrial .reviews-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.theme-industrial .reviews-carousel {
+  min-height: 200px;
 }
 .theme-industrial .reviews .review-card {
   background: #222;
   border: 1px solid #333;
   border-left: 4px solid #f97316;
-  padding: 24px;
+  padding: 28px;
 }
 .theme-industrial .review-stars {
   color: #f97316;

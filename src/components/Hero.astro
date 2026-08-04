@@ -49,6 +49,12 @@ const rating = Math.round(avgRating * 10) / 10;
   <div class="hero-inner">
     {style === 'industrial' ? (
       <>
+        <div class="hero-gears" aria-hidden="true">
+          <div class="hero-gear hero-gear--1"></div>
+          <div class="hero-gear hero-gear--2"></div>
+          <div class="hero-gear hero-gear--3"></div>
+          <div class="hero-gear hero-gear--4"></div>
+        </div>
         <p class="hero-est">{shop.established ? `Est. ${shop.established}` : ''}{shop.established && shop.municipality ? ' · ' : ''}{shop.municipality}</p>
         <h1 class="hero-name">{headline}</h1>
         <div class="hero-line"></div>

@@ -1,0 +1,8 @@
+- main [ref=e2]:
+  - heading "Auto Repair Demo Sites" [level=1] [ref=e3]
+  - paragraph [ref=e4]: Two demo websites for WhatsApp outreach
+  - generic [ref=e5]:
+    - link "Demo 1 — Industrial" [ref=e6] [cursor=pointer]:
+      - /url: /demo-1
+    - link "Demo 2 — Modern" [ref=e7] [cursor=pointer]:
+      - /url: /demo-2
