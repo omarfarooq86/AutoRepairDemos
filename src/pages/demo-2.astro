@@ -4,21 +4,29 @@ import Base from '../layouts/Base.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
 import About from '../components/About.astro';
+import WorkProcess from '../components/WorkProcess.astro';
+import CtaBanner from '../components/CtaBanner.astro';
 import Reviews from '../components/Reviews.astro';
+import Faq from '../components/Faq.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import data from '../data/demo-2.json';
 
-const { shop, hero, contact, services, reviews, style } = data;
+const { shop, hero, contact, services, reviews, whyChooseUs, workProcess, faqs, style } = data;
 ---
 
 <Base title={shop.name} style={style}>
   <Navbar shop={shop} style={style} />
   <Hero shop={shop} hero={hero} contact={contact} reviews={reviews} style={style} />
   <Services services={services} style={style} />
+  <WhyChooseUs whyChooseUs={whyChooseUs} style={style} />
   <About shop={shop} style={style} />
+  <WorkProcess workProcess={workProcess} style={style} />
+  <CtaBanner contact={contact} style={style} />
   <Reviews reviews={reviews} style={style} />
+  <Faq faqs={faqs} style={style} />
   <Contact contact={contact} style={style} />
   <Footer shop={shop} services={services} contact={contact} style={style} />
 </Base>
