@@ -4,6 +4,9 @@ export interface Props {
     shortName: string;
     description: string;
     tagline: string;
+    mission: string;
+    vision: string;
+    stats: { label: string; value: string }[];
   };
   style: 'industrial' | 'modern';
 }
@@ -11,10 +14,143 @@ export interface Props {
 const { shop, style } = Astro.props;
 ---
 
-<section class="about">
+<section class="about" id="about">
   <h2 class="section-heading">About {shop.shortName}</h2>
-  <div class="about-content">
-    <p>{shop.description}</p>
-    <p class="about-tagline">We take pride in every vehicle that rolls through our doors. {style === 'industrial' ? 'No shortcuts, no excuses — just honest work.' : 'Quality service, transparent pricing, and a team that cares about your car as much as you do.'}</p>
+
+  <!-- CSS-only tabs: hidden radio inputs + labels (checkbox/radio hack).
+       Panel visibility and active-tab styling toggle via :checked ~ sibling
+       selectors. No JavaScript required. -->
+  <div class="tabs">
+    <input type="radio" name="about-tabs" id="tab-about" class="tab-input" checked />
+    <input type="radio" name="about-tabs" id="tab-mission" class="tab-input" />
+    <input type="radio" name="about-tabs" id="tab-vision" class="tab-input" />
+
+    <div class="tab-labels">
+      <label for="tab-about" class="tab-label">About Us</label>
+      <label for="tab-mission" class="tab-label">Our Mission</label>
+      <label for="tab-vision" class="tab-label">Our Vision</label>
+    </div>
+
+    <div class="tab-panels">
+      <div class="tab-panel">
+        <p>{shop.description}</p>
+        <p class="about-tagline">We take pride in every vehicle that rolls through our doors. {style === 'industrial' ? 'No shortcuts, no excuses — just honest work.' : 'Quality service, transparent pricing, and a team that cares about your car as much as you do.'}</p>
+      </div>
+      <div class="tab-panel">
+        <p>{shop.mission}</p>
+      </div>
+      <div class="tab-panel">
+        <p>{shop.vision}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    {shop.stats.map((stat) => (
+      <div class="stat-card">
+        <span class="stat-value">{stat.value}</span>
+        <span class="stat-label">{stat.label}</span>
+      </div>
+    ))}
   </div>
 </section>
+
+<style>
+  /* Minimal functional CSS for tabs + stats grid. Uses theme custom
+     properties from global.css so it themes out of the box. Per-demo
+     themed styling (colors, fonts, shadows) is added in
+     demo-1.css / demo-2.css (Tasks 14/15). */
+
+  /* --- CSS-only tabs (radio + label pattern) --- */
+  .tab-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tab-labels {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 20px;
+  }
+
+  .tab-label {
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tab-label:hover {
+    color: var(--color-text);
+  }
+
+  /* Active tab */
+  #tab-about:checked ~ .tab-labels label[for='tab-about'],
+  #tab-mission:checked ~ .tab-labels label[for='tab-mission'],
+  #tab-vision:checked ~ .tab-labels label[for='tab-vision'] {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* Panels: only the panel matching the checked radio is shown */
+  .tab-panel {
+    display: none;
+  }
+  .tab-panel p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 700px;
+  }
+  #tab-about:checked ~ .tab-panels .tab-panel:nth-of-type(1),
+  #tab-mission:checked ~ .tab-panels .tab-panel:nth-of-type(2),
+  #tab-vision:checked ~ .tab-panels .tab-panel:nth-of-type(3) {
+    display: block;
+  }
+
+  /* --- Stats grid --- */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .stat-card {
+    border: 1px solid var(--color-border);
+    padding: 24px 16px;
+    text-align: center;
+  }
+  .stat-value {
+    display: block;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  @media (max-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .tab-labels {
+      overflow-x: auto;
+    }
+    .tab-label {
+      white-space: nowrap;
+    }
+  }
+</style>
