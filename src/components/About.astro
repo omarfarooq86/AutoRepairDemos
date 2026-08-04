@@ -1,0 +1,20 @@
+---
+export interface Props {
+  shop: {
+    shortName: string;
+    description: string;
+    tagline: string;
+  };
+  style: 'industrial' | 'modern';
+}
+
+const { shop, style } = Astro.props;
+---
+
+<section class="about">
+  <h2 class="section-heading">About {shop.shortName}</h2>
+  <div class="about-content">
+    <p>{shop.description}</p>
+    <p class="about-tagline">We take pride in every vehicle that rolls through our doors. {style === 'industrial' ? 'No shortcuts, no excuses — just honest work.' : 'Quality service, transparent pricing, and a team that cares about your car as much as you do.'}</p>
+  </div>
+</section>
