@@ -7,6 +7,8 @@ export interface Props {
 function getIcon(service: string): string {
   const map: Record<string, string> = {
     'brake repair': '\u{1F6E0}\u{FE0F}',
+    'engine rebuild': '\u{1F69B}',
+    'engine diagnostics': '\u{1F50D}',
     'engine': '\u{2699}\u{FE0F}',
     'ac service': '\u{2744}\u{FE0F}',
     'electrical': '\u{1F4A1}',
@@ -15,8 +17,6 @@ function getIcon(service: string): string {
     'body work': '\u{1F697}',
     'restoration': '\u{1F3A8}',
     'paint': '\u{1F3A8}',
-    'engine rebuild': '\u{1F69B}',
-    'engine diagnostics': '\u{1F50D}',
   };
 
   const key = service.toLowerCase();

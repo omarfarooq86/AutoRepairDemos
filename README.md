@@ -8,9 +8,9 @@ Built for WhatsApp outreach to auto repair businesses in Lahore: send a prospect
 
 | Route | Demo | Style | Business |
 |-------|------|-------|----------|
-| [`/`](https://auto-repair-demos.vercel.app/) | Landing page | — | Lists both demos |
-| [`/demo-1`](https://auto-repair-demos.vercel.app/demo-1) | Al Aziz Car Restoration & Workshop | Dark / industrial | `#1a1a1a`, accent `#f97316`, sharp corners |
-| [`/demo-2`](https://auto-repair-demos.vercel.app/demo-2) | Lahore Best Auto Workshop | Clean / modern | `#ffffff`, accent `#1e40af`, rounded + shadows |
+| [`/`](https://auto-repair-demos-nine.vercel.app/) | Landing page | — | Lists both demos |
+| [`/demo-1`](https://auto-repair-demos-nine.vercel.app/demo-1) | Al Aziz Car Restoration & Workshop | Dark / industrial | `#1a1a1a`, accent `#f97316`, sharp corners |
+| [`/demo-2`](https://auto-repair-demos-nine.vercel.app/demo-2) | Lahore Best Auto Workshop | Clean / modern | `#ffffff`, accent `#1e40af`, rounded + shadows |
 
 ## Tech Stack
 
@@ -72,7 +72,7 @@ npm run preview
 npx vercel --prod
 ```
 
-Vercel auto-detects Astro and runs `npm run build` on the server. The production URL is `https://auto-repair-demos.vercel.app`.
+Vercel auto-detects Astro and runs `npm run build` on the server. The production URL is `https://auto-repair-demos-nine.vercel.app`.
 
 ## Personalizing a Demo
 
