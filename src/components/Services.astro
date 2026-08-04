@@ -1,0 +1,42 @@
+---
+export interface Props {
+  services: string[];
+  style: 'industrial' | 'modern';
+}
+
+function getIcon(service: string): string {
+  const map: Record<string, string> = {
+    'brake repair': '\u{1F6E0}\u{FE0F}',
+    'engine': '\u{2699}\u{FE0F}',
+    'ac service': '\u{2744}\u{FE0F}',
+    'electrical': '\u{1F4A1}',
+    'oil change': '\u{1F6E2}\u{FE0F}',
+    'inspection': '\u{1F50D}',
+    'body work': '\u{1F697}',
+    'restoration': '\u{1F3A8}',
+    'paint': '\u{1F3A8}',
+    'engine rebuild': '\u{1F69B}',
+    'engine diagnostics': '\u{1F50D}',
+  };
+
+  const key = service.toLowerCase();
+  for (const [k, v] of Object.entries(map)) {
+    if (key.includes(k) || k.includes(key)) return v;
+  }
+  return '\u{1F527}'; // default: wrench
+}
+
+const { services, style } = Astro.props;
+---
+
+<section class="services">
+  <h2 class="section-heading">Our Services</h2>
+  <div class="services-grid">
+    {services.map((svc) => (
+      <div class="service-card">
+        {style === 'modern' && <span class="service-icon">{getIcon(svc)}</span>}
+        <span class="service-label">{svc}</span>
+      </div>
+    ))}
+  </div>
+</section>
