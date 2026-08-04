@@ -4,28 +4,150 @@
     "name": "Lahore Best Auto Workshop",
     "shortName": "Lahore Best Auto",
     "tagline": "Auto Workshop",
-    "established": null,
+    "established": "2016",
     "municipality": "Cantt, Lahore",
-    "description": "Your one-stop auto service center in Lahore. We offer professional brake repair, engine diagnostics, AC servicing, electrical work, oil changes, and vehicle inspections. Our experienced mechanics use modern equipment to get your vehicle running at its best. Fair prices, honest advice, and quality workmanship — that's the Lahore Best Auto promise."
+    "description": "Your one-stop auto service center in Lahore. We offer professional brake repair, engine diagnostics, AC servicing, electrical work, oil changes, and vehicle inspections. Our experienced mechanics use modern equipment to get your vehicle running at its best. Fair prices, honest advice, and quality workmanship — that's the Lahore Best Auto promise.",
+    "mission": "To give every customer honest, reliable, and affordable vehicle service — using modern diagnostic equipment and quality parts, with no unnecessary repairs and no hidden charges.",
+    "vision": "To be Lahore's most trusted general auto workshop, known for transparent pricing, dependable workmanship, and a service team that treats every car like its own.",
+    "stats": [
+      { "label": "Years Experience", "value": "10+" },
+      { "label": "Cars Serviced", "value": "8,000+" },
+      { "label": "Team Members", "value": "9" },
+      { "label": "Google Rating", "value": "4.6★" }
+    ]
   },
+  "hero": {
+    "headline": "Lahore's Reliable One-Stop Auto Workshop",
+    "subheadline": "Brake repair, engine diagnostics, AC service, electrical work, and more — all under one roof, done right the first time at a fair price.",
+    "badges": ["24/7 Service", "Fair Pricing", "Free Inspection"]
+  },
+  "services": [
+    {
+      "name": "Brake Repair",
+      "icon": "brake",
+      "description": "Pads, discs, drums, and full brake system overhauls. We replace worn components with quality parts and road-test every brake job so you stop safely, every time."
+    },
+    {
+      "name": "Engine Diagnostics",
+      "icon": "diagnostics",
+      "description": "Computerised engine scanning to pin down warning lights, rough idling, and performance issues fast. We find the real problem — not just the symptom."
+    },
+    {
+      "name": "AC Service",
+      "icon": "ac",
+      "description": "AC recharge, leak detection, and compressor or condenser replacement. We make sure your air conditioning blows cold and stays reliable through Lahore's summer."
+    },
+    {
+      "name": "Electrical Work",
+      "icon": "electrical",
+      "description": "Alternator, starter, wiring, and lighting repairs for all makes and models. From a dead battery to full electrical fault-finding, we've got you covered."
+    },
+    {
+      "name": "Oil Change",
+      "icon": "oil",
+      "description": "Quick, professional engine oil and filter changes using the right grade of oil for your car, keeping your engine protected between services."
+    },
+    {
+      "name": "Vehicle Inspection",
+      "icon": "inspection",
+      "description": "Pre-purchase and pre-travel inspections covering brakes, suspension, fluids, tyres, and electronics — with a plain-language report on the car's real condition."
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Experienced Mechanics",
+      "icon": "badge",
+      "description": "Certified technicians with over a decade of combined experience across Japanese, European, and Korean vehicles."
+    },
+    {
+      "title": "Modern Equipment",
+      "icon": "equipment",
+      "description": "Computerised diagnostics, professional AC machines, and the right tools for every job — so repairs are done accurately the first time."
+    },
+    {
+      "title": "Transparent Pricing",
+      "icon": "pricing",
+      "description": "You approve a written quote before any work starts. No surprise charges and no unnecessary repairs — just honest advice."
+    },
+    {
+      "title": "Genuine & Quality Parts",
+      "icon": "parts",
+      "description": "We fit original and trusted aftermarket parts sourced from authorised suppliers, and back major work with a warranty."
+    }
+  ],
+  "workProcess": [
+    {
+      "step": 1,
+      "title": "Diagnose",
+      "description": "Our technicians run a full computerised and mechanical check to identify the exact cause of the problem — fast and accurate."
+    },
+    {
+      "step": 2,
+      "title": "Plan",
+      "description": "We share a written estimate with a clear breakdown of parts and labour. You approve the plan before we touch your vehicle."
+    },
+    {
+      "step": 3,
+      "title": "Repair",
+      "description": "Our mechanics carry out the approved work using quality parts and tested procedures, keeping you updated along the way."
+    },
+    {
+      "step": 4,
+      "title": "Deliver",
+      "description": "We quality-check, road-test, and clean your vehicle before handover, then explain everything that was done in plain language."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Muhammad Imran",
+      "rating": 5,
+      "text": "Very professional and honest. They diagnosed an issue two other workshops couldn't find and fixed it at a fair price. Will definitely be coming back.",
+      "date": "18 Feb 2026"
+    },
+    {
+      "name": "Fatima Noor",
+      "rating": 4,
+      "text": "Got my AC serviced and a new alternator fitted. The service was quick, the price matched the quote, and the car has been running perfectly since.",
+      "date": "9 Apr 2026"
+    },
+    {
+      "name": "Hamza Sheikh",
+      "rating": 5,
+      "text": "Took my car for a pre-travel inspection before a long road trip. They were thorough and flagged a tyre issue that could have been dangerous. Highly recommended.",
+      "date": "27 Jun 2026"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much does a car service cost?",
+      "answer": "It depends on your vehicle and what it needs. An oil change with filter typically starts from Rs 4,000, while a full service is usually between Rs 8,000 and Rs 15,000. You always get a written quote before we start."
+    },
+    {
+      "question": "Do you provide pick-up and drop-off?",
+      "answer": "Yes, we offer pick-up and drop-off for customers in the Lahore Cantt and surrounding areas. Just call us and we'll arrange a convenient time."
+    },
+    {
+      "question": "Can you fix an issue that other workshops couldn't diagnose?",
+      "answer": "Very often, yes. We use computerised diagnostic equipment and a systematic approach, so we find the root cause instead of replacing parts at random."
+    },
+    {
+      "question": "Do you use original parts?",
+      "answer": "We use original manufacturer parts wherever possible, plus trusted high-quality aftermarket parts as alternatives. You choose the option that fits your budget."
+    },
+    {
+      "question": "How long does a typical repair take?",
+      "answer": "Most jobs — oil changes, brake pads, and AC servicing — are completed the same day. Major engine or electrical work can take one to two days. We give you an accurate time when you book."
+    },
+    {
+      "question": "Are your prices fixed, or do they change after the work?",
+      "answer": "The quote we give you is the price you pay. If we find additional work mid-job, we stop and confirm with you first — you approve any extra cost before we proceed."
+    }
+  ],
   "contact": {
     "phone": "03004544443",
     "displayPhone": "0300 4544443",
     "address": "13 B, Street 06b, Walton Road, Cantt, Lahore 54000",
     "hours": "Open 24 hours, 7 days a week",
     "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403!2d74.3871036!3d31.493144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f19a3478909%3A0x98ba61f5771a369f!2sLahore+Best+Auto+Workshop!5e0!3m2!1sen!2s!4v1712345678902!5m2!1sen!2s"
-  },
-  "services": [
-    "Brake Repair",
-    "Engine Diagnostics",
-    "AC Service",
-    "Electrical Work",
-    "Oil Change",
-    "Vehicle Inspection"
-  ],
-  "reviews": {
-    "rating": 4.6,
-    "count": 13,
-    "quote": "Professional service, fair prices. My go-to workshop in Lahore."
   }
 }

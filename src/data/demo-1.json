@@ -6,24 +6,138 @@
     "tagline": "Car Restoration",
     "established": "2018",
     "municipality": "Canal Bank Housing Scheme, Lahore",
-    "description": "We specialize in full vehicle restoration, body work, engine rebuilding, and custom paint jobs. With years of hands-on experience and a dedicated team of mechanics, we bring vehicles back to life — from classic rebuilds to modern collision repair. Every job gets our full attention, whether it's a full restoration or a quick touch-up."
+    "description": "We specialize in full vehicle restoration, body work, engine rebuilding, and custom paint jobs. With years of hands-on experience and a dedicated team of mechanics, we bring vehicles back to life — from classic rebuilds to modern collision repair. Every job gets our full attention, whether it's a full restoration or a quick touch-up.",
+    "mission": "To restore every vehicle to its original glory with handcrafted precision, genuine parts, and honest workmanship — so every car that leaves our workshop performs and looks as good as the day it rolled off the line.",
+    "vision": "To be Lahore's most trusted car restoration workshop, where classic cars are preserved, modern cars are repaired with care, and every customer leaves confident in the work we do.",
+    "stats": [
+      { "label": "Years Experience", "value": "8+" },
+      { "label": "Cars Restored", "value": "1,200+" },
+      { "label": "Team Members", "value": "12" },
+      { "label": "Google Rating", "value": "4.8★" }
+    ]
   },
+  "hero": {
+    "headline": "Lahore's Trusted Car Restoration Experts",
+    "subheadline": "From classic rebuilds to modern collision repair — precision body work, engine rebuilding, and custom paint that bring your vehicle back to life.",
+    "badges": ["24/7 Service", "Genuine Parts", "Free Inspection"]
+  },
+  "services": [
+    {
+      "name": "Engine Rebuild",
+      "icon": "engine",
+      "description": "Complete engine overhaul and rebuilding for petrol, diesel, and CNG vehicles. We strip, inspect, and machine every component to factory tolerance so your engine runs smoother and lasts longer."
+    },
+    {
+      "name": "Body Work",
+      "icon": "body",
+      "description": "Dent removal, panel beating, welding, and full body alignment. Whether it's a minor fender bender or serious collision damage, our panel beaters bring your car's frame back to true."
+    },
+    {
+      "name": "Restoration",
+      "icon": "restoration",
+      "description": "Full classic and vintage car restoration — from bare-metal stripping to showroom finish. We source original parts and preserve the character of your vehicle."
+    },
+    {
+      "name": "Custom Paint",
+      "icon": "paint",
+      "description": "Spray painting, metallic, and two-tone finishes using quality imported paints. Our spray booth delivers a flawless, durable finish with rust protection baked in."
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Certified Mechanics",
+      "icon": "badge",
+      "description": "A team trained and certified in modern engine and body repair techniques, with years of hands-on experience on both classic and modern vehicles."
+    },
+    {
+      "title": "Genuine Parts",
+      "icon": "parts",
+      "description": "We only fit original and high-grade parts. No cheap imitations — because the quality of a repair depends on the quality of the parts we install."
+    },
+    {
+      "title": "Free Inspection",
+      "icon": "inspection",
+      "description": "Bring your car in for a thorough inspection and an honest assessment. If a repair isn't worth the cost, we'll tell you straight."
+    },
+    {
+      "title": "12-Month Warranty",
+      "icon": "warranty",
+      "description": "Every restoration and major repair is backed by a workmanship warranty of up to 12 months. If anything goes wrong, we make it right at no extra cost."
+    }
+  ],
+  "workProcess": [
+    {
+      "step": 1,
+      "title": "Diagnose",
+      "description": "We inspect your vehicle inside and out, run a full mechanical check, and identify every issue so you know exactly what needs to be done."
+    },
+    {
+      "step": 2,
+      "title": "Plan",
+      "description": "You get a clear, itemised plan with an honest quote. We agree on scope, timeline, and budget before any work begins — no surprises."
+    },
+    {
+      "step": 3,
+      "title": "Restore",
+      "description": "Our mechanics and body specialists carry out the work with precision — engine, body, and paint — keeping you updated at every stage."
+    },
+    {
+      "step": 4,
+      "title": "Deliver",
+      "description": "We road-test every vehicle and run a final quality check before handing back the keys, along with a record of the work done."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Ahmed Raza",
+      "rating": 5,
+      "text": "Had my 1995 Corolla completely restored by Al Aziz. The paint job is flawless and the engine runs like new. These guys genuinely care about the work they do.",
+      "date": "12 Mar 2026"
+    },
+    {
+      "name": "Bilal Hussain",
+      "rating": 5,
+      "text": "After an accident damaged my Civic's body, they rebuilt it better than before. Honest pricing, and they finished a day earlier than promised.",
+      "date": "22 May 2026"
+    },
+    {
+      "name": "Usman Tariq",
+      "rating": 4,
+      "text": "Professional workshop with a proper spray booth. It took a little longer than quoted on my Suzuki Mehran, but the finish is worth the wait.",
+      "date": "3 Jul 2026"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does a full car restoration take?",
+      "answer": "A complete restoration typically takes 3 to 6 weeks, depending on the vehicle's condition and the scope of work. Minor body and paint jobs are usually finished in 5 to 10 days. You'll get a clear timeline after the initial free inspection."
+    },
+    {
+      "question": "Do you work on all car brands and models?",
+      "answer": "Yes. We handle Japanese, European, Korean, and locally assembled vehicles — from classic cars like the 1970s Corollas and Beetles to modern sedans and SUVs."
+    },
+    {
+      "question": "What type of paint do you use, and how long does it last?",
+      "answer": "We use quality imported two-pack and metallic paints with proper surface preparation and rust protection. A professionally done job holds its shine and finish for years with normal care."
+    },
+    {
+      "question": "Is the 12-month warranty really included in the price?",
+      "answer": "Yes. Every restoration and major repair includes a workmanship warranty of up to 12 months at no extra charge. It covers defects in our workmanship, not normal wear and tear."
+    },
+    {
+      "question": "Do I need to book an appointment, or can I just drop in?",
+      "answer": "You're welcome to drop in anytime — we're open 24 hours. For major restorations we recommend booking a free inspection slot so our team can give the car their full attention."
+    },
+    {
+      "question": "Can you restore a car that has been sitting for many years?",
+      "answer": "Absolutely. Vehicles that have been parked for years are some of our favourite projects. We bring them back mechanically and cosmetically — engine, brakes, wiring, and paint."
+    }
+  ],
   "contact": {
     "phone": "03214619299",
     "displayPhone": "0321 4619299",
     "address": "97-A Khuram Block, Taj Chowk, near Lahore Cantt, Lahore 54000",
     "hours": "Open 24 hours, 7 days a week",
     "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402!2d74.4142262!3d31.5731869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391911f5bf163fff%3A0x59d9c41824e9cb23!2sAl+Aziz+Car+Restoration+%26+Workshop!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
-  },
-  "services": [
-    "Engine Rebuild",
-    "Body Work",
-    "Restoration",
-    "Paint"
-  ],
-  "reviews": {
-    "rating": 4.8,
-    "count": 5,
-    "quote": "Best restoration work in Lahore. Highly recommended."
   }
 }

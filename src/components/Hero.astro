@@ -14,17 +14,22 @@ export interface ContactData {
 
 export interface ReviewData {
   rating: number;
-  count: number;
 }
 
 export interface Props {
   shop: Shop;
   contact: Pick<ContactData, 'phone' | 'displayPhone'>;
-  reviews: Pick<ReviewData, 'rating' | 'count'>;
+  reviews: ReviewData[];
   style: 'industrial' | 'modern';
 }
 
 const { shop, contact, reviews, style } = Astro.props;
+
+// Minimal bridge for the v2 data schema (reviews are now an array of cards).
+// Task 4 replaces this component with the full enhanced version using shop.stats + hero.badges.
+const count = reviews.length;
+const avgRating = count ? reviews.reduce((sum, r) => sum + r.rating, 0) / count : 0;
+const rating = Math.round(avgRating * 10) / 10;
 ---
 
 <section class="hero">
@@ -38,14 +43,14 @@ const { shop, contact, reviews, style } = Astro.props;
       </>
     ) : (
       <>
-        <span class="hero-badge">★ {reviews.rating} · {reviews.count} Reviews</span>
+        <span class="hero-badge">★ {rating} · {count} Reviews</span>
         <h1 class="hero-name">{shop.name}</h1>
         <p class="hero-tagline">{shop.tagline}</p>
       </>
     )}
     <a href={`tel:${contact.phone}`} class="hero-cta">Call Now — {contact.displayPhone}</a>
     {style === 'industrial' && (
-      <p class="hero-reviews">★ {reviews.rating} ({reviews.count} reviews)</p>
+      <p class="hero-reviews">★ {rating} ({count} reviews)</p>
     )}
   </div>
 </section>

@@ -1,13 +1,11 @@
 ---
 export interface Props {
-  reviews: {
-    rating: number;
-    count: number;
-    quote: string;
-  };
+  reviews: { name: string; rating: number; text: string; date: string }[];
   style: 'industrial' | 'modern';
 }
 
+// Minimal bridge for the v2 data schema (reviews are now an array of {name, rating, text, date} cards).
+// Task 10 replaces this component with the full enhanced version.
 const { reviews, style } = Astro.props;
 
 function stars(rating: number): string {
@@ -17,9 +15,13 @@ function stars(rating: number): string {
 
 <section class="reviews">
   <h2 class="section-heading">What Our Customers Say</h2>
-  <div class="review-card">
-    <div class="review-stars">{stars(reviews.rating)}</div>
-    <blockquote class="review-quote">&ldquo;{reviews.quote}&rdquo;</blockquote>
-    <p class="review-count">{reviews.rating} rating &mdash; based on {reviews.count} Google reviews</p>
+  <div class="reviews-grid">
+    {reviews.map((review) => (
+      <div class="review-card">
+        <div class="review-stars">{stars(review.rating)}</div>
+        <blockquote class="review-quote">&ldquo;{review.text}&rdquo;</blockquote>
+        <p class="review-meta"><strong>{review.name}</strong> &mdash; {review.date}</p>
+      </div>
+    ))}
   </div>
 </section>

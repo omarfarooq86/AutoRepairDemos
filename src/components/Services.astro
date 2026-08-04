@@ -1,29 +1,26 @@
 ---
 export interface Props {
-  services: string[];
+  services: { name: string; icon: string; description: string }[];
   style: 'industrial' | 'modern';
 }
 
-function getIcon(service: string): string {
-  const map: Record<string, string> = {
-    'brake repair': '\u{1F6E0}\u{FE0F}',
-    'engine rebuild': '\u{1F69B}',
-    'engine diagnostics': '\u{1F50D}',
-    'engine': '\u{2699}\u{FE0F}',
-    'ac service': '\u{2744}\u{FE0F}',
-    'electrical': '\u{1F4A1}',
-    'oil change': '\u{1F6E2}\u{FE0F}',
-    'inspection': '\u{1F50D}',
-    'body work': '\u{1F697}',
-    'restoration': '\u{1F3A8}',
-    'paint': '\u{1F3A8}',
-  };
+// Minimal bridge for the v2 data schema (services are now {name, icon, description} objects).
+// Task 5 replaces this component with the full enhanced version.
+const ICONS: Record<string, string> = {
+  engine: '\u{1F69B}',
+  body: '\u{1F697}',
+  restoration: '\u{1F3A8}',
+  paint: '\u{1F3A8}',
+  brake: '\u{1F6E0}\u{FE0F}',
+  diagnostics: '\u{1F50D}',
+  ac: '\u{2744}\u{FE0F}',
+  electrical: '\u{1F4A1}',
+  oil: '\u{1F6E2}\u{FE0F}',
+  inspection: '\u{1F50D}',
+};
 
-  const key = service.toLowerCase();
-  for (const [k, v] of Object.entries(map)) {
-    if (key.includes(k) || k.includes(key)) return v;
-  }
-  return '\u{1F527}'; // default: wrench
+function getIcon(icon: string): string {
+  return ICONS[icon] ?? '\u{1F527}'; // default: wrench
 }
 
 const { services, style } = Astro.props;
@@ -34,8 +31,9 @@ const { services, style } = Astro.props;
   <div class="services-grid">
     {services.map((svc) => (
       <div class="service-card">
-        {style === 'modern' && <span class="service-icon">{getIcon(svc)}</span>}
-        <span class="service-label">{svc}</span>
+        {style === 'modern' && <span class="service-icon">{getIcon(svc.icon)}</span>}
+        <span class="service-label">{svc.name}</span>
+        {svc.description && <p class="service-desc">{svc.description}</p>}
       </div>
     ))}
   </div>
