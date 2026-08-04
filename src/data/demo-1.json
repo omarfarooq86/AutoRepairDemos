@@ -1,24 +1,24 @@
 {
   "style": "industrial",
   "shop": {
-    "name": "Al Aziz Car Restoration & Workshop",
-    "shortName": "Al Aziz",
-    "tagline": "Car Restoration",
-    "established": "2018",
-    "municipality": "Canal Bank Housing Scheme, Lahore",
-    "description": "We specialize in full vehicle restoration, body work, engine rebuilding, and custom paint jobs. With years of hands-on experience and a dedicated team of mechanics, we bring vehicles back to life — from classic rebuilds to modern collision repair. Every job gets our full attention, whether it's a full restoration or a quick touch-up.",
-    "mission": "To restore every vehicle to its original glory with handcrafted precision, genuine parts, and honest workmanship — so every car that leaves our workshop performs and looks as good as the day it rolled off the line.",
-    "vision": "To be Lahore's most trusted car restoration workshop, where classic cars are preserved, modern cars are repaired with care, and every customer leaves confident in the work we do.",
+    "name": "Lahore Auto Pro",
+    "shortName": "Auto Pro",
+    "tagline": "Complete Car Care",
+    "established": "2015",
+    "municipality": "Lahore, Pakistan",
+    "description": "We handle everything from routine maintenance to major repairs — engine work, brakes, AC service, body repairs, and complete diagnostics. Our experienced mechanics use modern equipment and genuine parts to get every job done right. No shortcuts, no guesswork — just honest, reliable service that keeps your car running at its best.",
+    "mission": "To provide every customer with honest, high-quality auto repair service — using modern diagnostic tools, genuine parts, and skilled mechanics who treat every vehicle like their own.",
+    "vision": "To be Lahore's most recommended auto workshop — known for fair pricing, dependable workmanship, and a team that puts customer trust above everything else.",
     "stats": [
-      { "label": "Years Experience", "value": "8+" },
-      { "label": "Cars Restored", "value": "1,200+" },
+      { "label": "Years Experience", "value": "10+" },
+      { "label": "Cars Serviced", "value": "5,000+" },
       { "label": "Team Members", "value": "12" },
       { "label": "Google Rating", "value": "4.8★" }
     ]
   },
   "hero": {
-    "headline": "Lahore's Trusted Car Restoration Experts",
-    "subheadline": "From classic rebuilds to modern collision repair — precision body work, engine rebuilding, and custom paint that bring your vehicle back to life.",
+    "headline": "Lahore's Trusted Auto Repair Experts",
+    "subheadline": "From routine maintenance to major overhauls — professional diagnostics, certified mechanics, and quality parts that keep your vehicle running smoothly.",
     "badges": ["24/7 Service", "Genuine Parts", "Free Inspection"]
   },
   "services": [
@@ -89,22 +89,22 @@
   ],
   "reviews": [
     {
-      "name": "Ahmed Raza",
+      "name": "Ahmed R.",
       "rating": 5,
-      "text": "Had my 1995 Corolla completely restored by Al Aziz. The paint job is flawless and the engine runs like new. These guys genuinely care about the work they do.",
-      "date": "12 Mar 2026"
+      "text": "Brought my Corolla in for a full engine rebuild and service. The team diagnosed the issue in minutes, fixed it the same day, and charged exactly what they quoted. Finally found a workshop I can trust.",
+      "date": "2 weeks ago"
     },
     {
-      "name": "Bilal Hussain",
+      "name": "Bilal H.",
       "rating": 5,
-      "text": "After an accident damaged my Civic's body, they rebuilt it better than before. Honest pricing, and they finished a day earlier than promised.",
-      "date": "22 May 2026"
+      "text": "After a major accident, they handled everything — body work, painting, alignment. Car came back looking brand new. Professional service from start to finish, fair pricing, and they kept me updated throughout.",
+      "date": "1 month ago"
     },
     {
-      "name": "Usman Tariq",
+      "name": "Usman T.",
       "rating": 4,
-      "text": "Professional workshop with a proper spray booth. It took a little longer than quoted on my Suzuki Mehran, but the finish is worth the wait.",
-      "date": "3 Jul 2026"
+      "text": "Took my Mehran here for AC repair and general service. Work took a little longer than expected, but the quality was worth the wait. Honest mechanics who don't push unnecessary repairs.",
+      "date": "2 months ago"
     }
   ],
   "faqs": [
@@ -134,10 +134,10 @@
     }
   ],
   "contact": {
-    "phone": "03214619299",
-    "displayPhone": "0321 4619299",
-    "address": "97-A Khuram Block, Taj Chowk, near Lahore Cantt, Lahore 54000",
-    "hours": "Open 24 hours, 7 days a week",
-    "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402!2d74.4142262!3d31.5731869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391911f5bf163fff%3A0x59d9c41824e9cb23!2sAl+Aziz+Car+Restoration+%26+Workshop!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
+    "phone": "03001234567",
+    "displayPhone": "0300 1234567",
+    "address": "Main Auto Market, Lahore, Pakistan",
+    "hours": "Mon–Sat: 9 AM – 8 PM | Sunday: 10 AM – 4 PM",
+    "mapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.3882646394!2d74.15738425!3d31.48286415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e4b52fbf%3A0x1b7e0c9e3c3b5c5a!2sLahore!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
   }
 }
