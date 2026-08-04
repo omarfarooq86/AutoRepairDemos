@@ -1,0 +1,22 @@
+---
+import '../styles/demo-2.css';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Reviews from '../components/Reviews.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import data from '../data/demo-2.json';
+
+const { shop, contact, services, reviews, style } = data;
+---
+
+<Base title={shop.name} style={style}>
+  <Hero shop={shop} contact={contact} reviews={reviews} style={style} />
+  <Services services={services} style={style} />
+  <About shop={shop} style={style} />
+  <Reviews reviews={reviews} style={style} />
+  <Contact contact={contact} style={style} />
+  <Footer shop={shop} style={style} />
+</Base>
