@@ -1,0 +1,72 @@
+---
+export interface ContactData {
+  phone: string;
+  displayPhone: string;
+}
+
+export interface Props {
+  contact: ContactData;
+  style: 'industrial' | 'modern';
+}
+
+const { contact, style } = Astro.props;
+---
+
+<section class={`cta cta--${style}`} id="cta">
+  <div class="cta-inner">
+    <h2 class="cta-heading">Ready to Get Your Car Serviced?</h2>
+    <a href={`tel:${contact.phone}`} class="cta-button">Call Now — {contact.displayPhone}</a>
+  </div>
+</section>
+
+<style>
+  /* ===== Minimal functional styling for the v2 CTA strip =====
+     Only layout + neutral colors via theme custom properties, so both demos
+     render correctly out of the box. Themed look (orange vs blue accents,
+     borders, hover) is applied in Tasks 14/15. */
+
+  .cta {
+    border: 1px solid var(--color-border, #333);
+    background: var(--color-bg, #1a1a1a);
+  }
+
+  .cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .cta-heading {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid var(--color-border, #333);
+    border-radius: 2px;
+    background: var(--color-bg, #fff);
+    color: inherit;
+  }
+
+  .cta-button:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 640px) {
+    .cta-inner {
+      padding: 36px 20px;
+    }
+  }
+</style>
