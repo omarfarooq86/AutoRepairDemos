@@ -16,9 +16,9 @@ const { contact, style } = Astro.props;
 ---
 
 <section class="contact" id="contact">
-  <h2 class="section-heading">Visit Us</h2>
+  <h2 class="section-heading" data-reveal>Visit Us</h2>
   <div class="contact-grid">
-    <div class="contact-info">
+    <div class="contact-info" data-reveal>
       <div class="contact-row">
         <strong>Address</strong>
         <span>{contact.address}</span>
@@ -32,7 +32,7 @@ const { contact, style } = Astro.props;
         <span>{contact.hours}</span>
       </div>
     </div>
-    <div class="contact-map">
+    <div class="contact-map" data-reveal>
       <iframe
         src={contact.mapsEmbed}
         width="100%"
@@ -46,7 +46,7 @@ const { contact, style } = Astro.props;
     </div>
     <!-- Display-only contact form: the 3 fields are visual placeholders only
          (no <form> wrapper, no submit button, no submit handler, no JS). -->
-    <div class="contact-form">
+    <div class="contact-form" data-reveal>
       <h3 class="contact-form-title">Send Us a Message</h3>
       <div class="contact-form-field">
         <label class="contact-form-label" for="contact-name">Name</label>

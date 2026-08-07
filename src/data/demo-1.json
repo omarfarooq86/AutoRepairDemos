@@ -19,8 +19,83 @@
   "hero": {
     "headline": "Lahore's Trusted Auto Repair Experts",
     "subheadline": "From routine maintenance to major overhauls — professional diagnostics, certified mechanics, and quality parts that keep your vehicle running smoothly.",
-    "badges": ["24/7 Service", "Genuine Parts", "Free Inspection"]
+    "badges": ["24/7 Service", "Genuine Parts", "Free Inspection"],
+    "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1600&q=80"
   },
+  "brands": ["Toyota", "Honda", "Suzuki", "Nissan", "Mitsubishi", "Daihatsu", "Hyundai", "Kia", "Mercedes-Benz", "BMW", "Audi", "Isuzu"],
+  "gallery": [
+    {
+      "title": "Complete Engine Rebuild",
+      "category": "Engine",
+      "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Panel Beating & Alignment",
+      "category": "Body Work",
+      "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "1972 Corolla Restoration",
+      "category": "Restoration",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Two-Tone Custom Finish",
+      "category": "Paint Booth",
+      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Wheel & Tyre Service",
+      "category": "Tyres",
+      "image": "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Computer Diagnostics",
+      "category": "Diagnostics",
+      "image": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "team": [
+    {
+      "name": "Rashid Mehmood",
+      "role": "Master Mechanic",
+      "experience": "18 years on engines & gearboxes",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Imran Khan",
+      "role": "Body & Paint Specialist",
+      "experience": "12 years in the spray booth",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Ali Hassan",
+      "role": "Restoration Lead",
+      "experience": "10 years restoring classics",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Essential Service",
+      "price": "Rs 7,500",
+      "note": "per visit",
+      "features": ["Engine oil & filter change", "20-point safety inspection", "Brake check & adjustment", "Fluid top-up", "Exterior wash"]
+    },
+    {
+      "name": "Complete Overhaul",
+      "price": "Rs 45,000",
+      "note": "starting from",
+      "popular": true,
+      "features": ["Full engine diagnostic", "Engine tune-up", "Brake system overhaul", "Suspension check", "AC service", "Free wash & polish"]
+    },
+    {
+      "name": "Full Restoration",
+      "price": "Custom Quote",
+      "note": "after free inspection",
+      "features": ["Bare-metal body work", "Engine rebuild", "Paint & finish", "Interior restoration", "12-month warranty"]
+    }
+  ],
   "services": [
     {
       "name": "Engine Rebuild",

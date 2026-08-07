@@ -71,9 +71,9 @@
   min-height: 60vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   background-size: 300% 300%;
   background-image:
     linear-gradient(135deg, #eff6ff 0%, #dbeafe 40%, #bfdbfe 70%, #eff6ff 100%);
@@ -548,4 +548,173 @@
   .theme-modern .cta--modern .cta-inner {
     padding: 40px 20px;
   }
+}
+
+/* ============================================================
+   v3: animations, imagery sections & interactions — MODERN
+   ============================================================ */
+
+/* --- Navbar: stronger elevation once the page scrolls --- */
+.theme-modern.is-scrolled .navbar.navbar--modern {
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.1);
+}
+
+/* --- Hero: split layout polish --- */
+.theme-modern .hero-cta-secondary {
+  border: 1px solid #bfdbfe;
+  border-radius: 100px;
+  background: #ffffff;
+  color: #1e40af;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 14px 32px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.theme-modern .hero-cta-secondary:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+}
+.theme-modern .hero-visual-img {
+  border: 6px solid #ffffff;
+  box-shadow: 0 24px 60px rgba(30, 64, 175, 0.2);
+}
+
+@media (max-width: 900px) {
+  .theme-modern .hero-inner {
+    text-align: center;
+  }
+  .theme-modern .hero-ctas,
+  .theme-modern .hero-badges {
+    justify-content: center;
+  }
+}
+
+/* --- Brand marquee (full-bleed strip) --- */
+.theme-modern .brands {
+  max-width: none;
+  padding: 28px 0;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+.theme-modern .brands-label {
+  color: #94a3b8;
+}
+.theme-modern .marquee-item {
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.theme-modern .marquee-item:hover {
+  color: #1e40af;
+}
+.theme-modern .marquee-dot {
+  background: #60a5fa;
+}
+
+/* --- Gallery --- */
+.theme-modern .gallery-item {
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.theme-modern .gallery-item:hover {
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+  transform: translateY(-3px);
+}
+.theme-modern .gallery-cat {
+  color: #93c5fd;
+}
+
+/* --- Team --- */
+.theme-modern .team-card {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+.theme-modern .team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+.theme-modern .team-role {
+  color: #1e40af;
+}
+.theme-modern .team-exp {
+  color: #64748b;
+}
+
+/* --- Pricing --- */
+.theme-modern .price-card {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+.theme-modern .price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+.theme-modern .price-card--popular {
+  border-color: #bfdbfe;
+  box-shadow: 0 0 0 2px #1e40af, 0 20px 44px rgba(30, 64, 175, 0.18);
+  transform: scale(1.02);
+}
+.theme-modern .price-card--popular:hover {
+  transform: scale(1.02) translateY(-4px);
+}
+.theme-modern .price-flag {
+  background: #1e40af;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+.theme-modern .price-value {
+  color: #1e40af;
+}
+.theme-modern .price-features {
+  border-top: 1px solid #f1f5f9;
+}
+.theme-modern .price-features li {
+  color: #475569;
+}
+.theme-modern .price-features li::before {
+  color: #1e40af;
+}
+.theme-modern .price-cta {
+  border-radius: 100px;
+  border-color: #bfdbfe;
+  color: #1e40af;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, transform 0.2s, border-color 0.2s;
+}
+.theme-modern .price-cta:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+  color: #ffffff;
+}
+.theme-modern .price-card--popular .price-cta {
+  background: #1e40af;
+  border-color: #1e40af;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+}
+.theme-modern .price-card--popular .price-cta:hover {
+  background: #1e3a8a;
+}
+
+/* --- Back to top --- */
+.theme-modern .back-to-top {
+  background: #ffffff;
+  color: #1e40af;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+}
+.theme-modern .back-to-top:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+  color: #ffffff;
 }

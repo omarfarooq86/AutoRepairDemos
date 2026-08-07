@@ -15,7 +15,7 @@ const { shop, style } = Astro.props;
 ---
 
 <section class="about" id="about">
-  <h2 class="section-heading">About {shop.shortName}</h2>
+  <h2 class="section-heading" data-reveal>About {shop.shortName}</h2>
 
   <!-- CSS-only tabs: hidden radio inputs + labels (checkbox/radio hack).
        Panel visibility and active-tab styling toggle via :checked ~ sibling
@@ -47,8 +47,8 @@ const { shop, style } = Astro.props;
 
   <div class="stats-grid">
     {shop.stats.map((stat) => (
-      <div class="stat-card">
-        <span class="stat-value">{stat.value}</span>
+      <div class="stat-card" data-reveal>
+        <span class="stat-value" data-count>{stat.value}</span>
         <span class="stat-label">{stat.label}</span>
       </div>
     ))}

@@ -11,11 +11,11 @@ const { faqs, style } = Astro.props;
      item with zero JavaScript. Base box styling (border, padding, +/×
      marker, open-state divider) lives in global.css (Task 2). -->
 <section class={`faq faq--${style}`} id="faq">
-  <h2 class="section-heading">Frequently Asked Questions</h2>
+  <h2 class="section-heading" data-reveal>Frequently Asked Questions</h2>
 
   <div class="faq-list">
     {faqs.map((item) => (
-      <details class="faq-item">
+      <details class="faq-item" data-reveal>
         <summary>{item.question}</summary>
         <div class="faq-answer">{item.answer}</div>
       </details>

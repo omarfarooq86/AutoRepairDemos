@@ -19,8 +19,83 @@
   "hero": {
     "headline": "Lahore's Trusted Full-Service Auto Workshop",
     "subheadline": "Brake repair, engine diagnostics, AC service, electrical work, and more — all under one roof, done right the first time at a fair price.",
-    "badges": ["24/7 Service", "Fair Pricing", "Free Inspection"]
+    "badges": ["24/7 Service", "Fair Pricing", "Free Inspection"],
+    "image": "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=1000&q=80"
   },
+  "brands": ["Toyota", "Honda", "Suzuki", "Nissan", "Hyundai", "Kia", "Mitsubishi", "Daihatsu", "Mercedes-Benz", "BMW", "Audi", "Changan"],
+  "gallery": [
+    {
+      "title": "Computerised Diagnostics",
+      "category": "Diagnostics",
+      "image": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Engine Care & Tuning",
+      "category": "Engine",
+      "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Brake System Service",
+      "category": "Brakes",
+      "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Detailing & Wash",
+      "category": "Detailing",
+      "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Classic Car Care",
+      "category": "Restoration",
+      "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "title": "Pre-Travel Inspection",
+      "category": "Inspection",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "team": [
+    {
+      "name": "Ahmed Malik",
+      "role": "Chief Technician",
+      "experience": "14 years across Japanese & European cars",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Sana Tariq",
+      "role": "Diagnostics Specialist",
+      "experience": "8 years on computerised fault-finding",
+      "image": "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Bilal Ahmed",
+      "role": "Service Advisor",
+      "experience": "9 years helping customers plan repairs",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Oil & Filter",
+      "price": "Rs 4,500",
+      "note": "per visit",
+      "features": ["Engine oil change", "Oil filter replacement", "Fluid level check", "Tyre pressure check"]
+    },
+    {
+      "name": "Full Service",
+      "price": "Rs 12,000",
+      "note": "per visit",
+      "popular": true,
+      "features": ["Oil & filter change", "Computer diagnostics scan", "Brake inspection", "AC performance check", "Battery & electrical check", "Free car wash"]
+    },
+    {
+      "name": "Major Repair",
+      "price": "Custom Quote",
+      "note": "written estimate first",
+      "features": ["Engine or transmission work", "Genuine parts options", "No work without approval", "Repair warranty included"]
+    }
+  ],
   "services": [
     {
       "name": "Brake Repair",

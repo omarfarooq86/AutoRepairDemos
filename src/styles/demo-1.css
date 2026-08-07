@@ -69,11 +69,30 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,26,0.95) 100%),
-    url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80') center/cover no-repeat;
   position: relative;
   overflow: hidden;
+}
+/* Background photo lives on its own layer so it can slowly zoom (Ken Burns)
+   without moving the hero content. The URL comes from hero.image via the
+   --hero-image custom property set inline by Hero.astro. */
+.theme-industrial .hero-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(26,26,26,0.95) 100%),
+    var(--hero-image, url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80')) center/cover no-repeat;
+  animation: heroKenBurns 26s ease-in-out infinite alternate;
+}
+@keyframes heroKenBurns {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-industrial .hero-inner::before {
+    animation: none;
+  }
 }
 
 /* Floating gear background (industrial only) */
@@ -124,12 +143,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-/* Ensure hero text sits above gears */
+/* Ensure hero text sits above the photo layer and gears */
 .theme-industrial .hero-est,
 .theme-industrial .hero-name,
 .theme-industrial .hero-line,
 .theme-industrial .hero-tagline,
-.theme-industrial .hero-cta,
+.theme-industrial .hero-ctas,
 .theme-industrial .hero-reviews,
 .theme-industrial .hero-badges {
   position: relative;
@@ -653,4 +672,196 @@
   .theme-industrial .footer-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   v3: animations, imagery sections & interactions — INDUSTRIAL
+   ============================================================ */
+
+/* --- Navbar: elevated once the page scrolls --- */
+.theme-industrial.is-scrolled .navbar {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+  border-bottom-color: #3a3a3a;
+}
+
+/* --- Hero: secondary ghost CTA --- */
+.theme-industrial .hero-ctas {
+  margin-top: 4px;
+}
+.theme-industrial .hero-cta-secondary {
+  border: 1px solid #f97316;
+  border-radius: 0;
+  background: transparent;
+  color: #f97316;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-industrial .hero-cta-secondary:hover {
+  background: rgba(249, 115, 22, 0.12);
+  color: #fb923c;
+}
+
+/* --- Brand marquee (full-bleed strip) --- */
+.theme-industrial .brands {
+  max-width: none;
+  padding: 28px 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background: #161616;
+}
+.theme-industrial .brands-label {
+  font-family: 'Courier New', monospace;
+  color: #666;
+  letter-spacing: 3px;
+}
+.theme-industrial .marquee-item {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  color: #777;
+}
+.theme-industrial .marquee-item:hover {
+  color: #f97316;
+}
+.theme-industrial .marquee-dot {
+  background: #f97316;
+}
+
+/* --- Gallery --- */
+.theme-industrial .gallery-item {
+  border: 1px solid #333;
+  transition: border-color 0.3s ease;
+}
+.theme-industrial .gallery-item:hover {
+  border-color: #f97316;
+}
+.theme-industrial .gallery-cat {
+  font-family: 'Courier New', monospace;
+  color: #f97316;
+}
+.theme-industrial .gallery-title {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+
+/* --- Team (grayscale → color on hover) --- */
+.theme-industrial .team-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+.theme-industrial .team-card:hover {
+  transform: translateY(-4px);
+  border-color: #f97316;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+.theme-industrial .team-photo img {
+  filter: grayscale(90%);
+}
+.theme-industrial .team-card:hover .team-photo img {
+  filter: grayscale(0%);
+}
+.theme-industrial .team-name {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #e5e5e5;
+}
+.theme-industrial .team-role {
+  font-family: 'Courier New', monospace;
+  color: #f97316;
+}
+.theme-industrial .team-exp {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* --- Pricing --- */
+.theme-industrial .pricing {
+  border-top: 1px solid #333;
+}
+.theme-industrial .price-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+.theme-industrial .price-card:hover {
+  transform: translateY(-4px);
+  border-color: #f97316;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+.theme-industrial .price-card--popular {
+  border-color: #f97316;
+  box-shadow: 0 0 0 1px #f97316, 0 16px 40px rgba(249, 115, 22, 0.14);
+}
+.theme-industrial .price-flag {
+  background: #f97316;
+  color: #000;
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+}
+.theme-industrial .price-name {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+}
+.theme-industrial .price-value {
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  color: #f97316;
+}
+.theme-industrial .price-note {
+  font-family: 'Courier New', monospace;
+  color: #888;
+}
+.theme-industrial .price-features {
+  border-top: 1px solid #333;
+}
+.theme-industrial .price-features li {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #888;
+}
+.theme-industrial .price-features li::before {
+  color: #f97316;
+}
+.theme-industrial .price-cta {
+  border: 1px solid #f97316;
+  border-radius: 0;
+  color: #f97316;
+  font-family: 'Arial Black', 'Impact', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-industrial .price-cta:hover {
+  background: #f97316;
+  color: #000;
+  transform: none;
+}
+.theme-industrial .price-card--popular .price-cta {
+  background: #f97316;
+  color: #000;
+}
+.theme-industrial .price-card--popular .price-cta:hover {
+  background: #fb923c;
+}
+
+/* --- Back to top --- */
+.theme-industrial .back-to-top {
+  background: #f97316;
+  color: #000;
+  border: 1px solid #f97316;
+  border-radius: 0;
+}
+.theme-industrial .back-to-top:hover {
+  background: #fb923c;
 }

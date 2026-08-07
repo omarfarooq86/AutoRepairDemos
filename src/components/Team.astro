@@ -1,0 +1,103 @@
+---
+export interface TeamMember {
+  name: string;
+  role: string;
+  experience: string;
+  image: string;
+}
+
+export interface Props {
+  team: TeamMember[];
+  style: 'industrial' | 'modern';
+}
+
+const { team, style } = Astro.props;
+---
+
+<section class={`team team--${style}`} id="team">
+  <h2 class="section-heading" data-reveal>Meet the Team</h2>
+  <div class="team-grid">
+    {team.map((member) => (
+      <article class="team-card" data-reveal>
+        <div class="team-photo">
+          <img src={member.image} alt={`Portrait of ${member.name}`} loading="lazy" width="600" height="750" />
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">{member.name}</h3>
+          <p class="team-role">{member.role}</p>
+          <p class="team-exp">{member.experience}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* Minimal functional team grid. Themed photo treatments (grayscale →
+     color on hover for industrial, soft shadow lift for modern) live in the
+     demo CSS files. */
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .team-card {
+    border: 1px solid var(--color-border, #333);
+    background: var(--color-bg, #fff);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .team-photo {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--color-border, #333);
+  }
+
+  .team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+  }
+
+  .team-card:hover .team-photo img {
+    transform: scale(1.05);
+  }
+
+  .team-info {
+    padding: 18px 20px 22px;
+    text-align: center;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-accent, #f97316);
+    margin-bottom: 8px;
+  }
+
+  .team-exp {
+    font-size: 0.88rem;
+    color: var(--color-muted, #888);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+</style>

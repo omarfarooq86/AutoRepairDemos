@@ -13,7 +13,7 @@ const { contact, style } = Astro.props;
 ---
 
 <section class={`cta cta--${style}`} id="cta">
-  <div class="cta-inner">
+  <div class="cta-inner" data-reveal>
     <h2 class="cta-heading">Ready to Get Your Car Serviced?</h2>
     <a href={`tel:${contact.phone}`} class="cta-button">Call Now — {contact.displayPhone}</a>
   </div>

@@ -8,13 +8,13 @@ const { workProcess, style } = Astro.props;
 ---
 
 <section class={`process process--${style}`} id="process">
-  <h2 class="section-heading">Our Process</h2>
+  <h2 class="section-heading" data-reveal>Our Process</h2>
 
   <!-- 4-step horizontal flow. Number circles sit on a connector line drawn
        by .process-row::before; each step is an equal-width grid column. -->
   <div class="process-row">
     {workProcess.map((item) => (
-      <div class="process-step">
+      <div class="process-step" data-reveal>
         <span class="step-circle">{item.step}</span>
         <div class="step-copy">
           <h3 class="step-title">{item.title}</h3>

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(npm:*)",
+      "Shell(agent-browser:*)",
+      "Shell(curl -s -o NUL -w demo-1: %{http_code}\\n http://localhost:4321/demo-1/)",
+      "Shell(curl -s -o NUL -w demo-2: %{http_code}\\n http://localhost:4321/demo-2/)",
+      "Shell(vercel:*)",
+      "Shell(npx vercel --prod --yes)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

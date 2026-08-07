@@ -23,10 +23,10 @@ const { whyChooseUs, style } = Astro.props;
 ---
 
 <section class="why-us" id="why-us">
-  <h2 class="section-heading">Why Choose Us</h2>
+  <h2 class="section-heading" data-reveal>Why Choose Us</h2>
   <div class={`why-us-grid why-us-grid--${style}`}>
     {whyChooseUs.map((item) => (
-      <div class="why-us-card">
+      <div class="why-us-card" data-reveal>
         <span class="why-us-icon" aria-hidden="true">{getIcon(item.icon)}</span>
         <h3 class="why-us-title">{item.title}</h3>
         <p class="why-us-desc">{item.description}</p>

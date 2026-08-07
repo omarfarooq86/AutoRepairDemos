@@ -1,0 +1,52 @@
+---
+export interface Props {
+  style: 'industrial' | 'modern';
+}
+
+const { style } = Astro.props;
+---
+
+<!-- Fixed back-to-top anchor. Visibility is toggled by the .is-visible class
+     from the shared scroll script in Base.astro (shows after ~600px). -->
+<a href="#top" class={`back-to-top back-to-top--${style}`} aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" />
+  </svg>
+</a>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border, #333);
+    background: var(--color-accent, #f97316);
+    color: var(--color-bg, #fff);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+
+  .back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-3px);
+  }
+
+  .back-to-top:focus-visible {
+    outline: 2px solid var(--color-accent, #f97316);
+    outline-offset: 3px;
+  }
+</style>

@@ -25,10 +25,10 @@ const { services, style } = Astro.props;
 ---
 
 <section class="services" id="services">
-  <h2 class="section-heading">Our Services</h2>
+  <h2 class="section-heading" data-reveal>Our Services</h2>
   <div class="services-grid">
     {services.map((svc) => (
-      <div class="service-card">
+      <div class="service-card" data-reveal>
         {style === 'modern' && <span class="service-icon">{getIcon(svc.icon)}</span>}
         <h3 class="service-label">{svc.name}</h3>
         <p class="service-desc">{svc.description}</p>

@@ -129,3 +129,39 @@ section {
     padding: 40px 16px;
   }
 }
+
+/* ===== Scroll Reveal (JS-gated) =====
+   Elements start hidden only when JS is available (.js on <html>, added in
+   Base.astro). The .is-visible class triggers a one-shot keyframe animation
+   with fill-mode "backwards" so it never clobbers the themed hover
+   transitions on cards after the reveal finishes. Stagger delay comes from
+   the --reveal-delay custom property set by the shared script. */
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+  }
+  .js [data-reveal].is-visible {
+    animation: none;
+  }
+}

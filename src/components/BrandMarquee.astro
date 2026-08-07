@@ -1,0 +1,106 @@
+---
+export interface Props {
+  brands: string[];
+  style: 'industrial' | 'modern';
+}
+
+const { brands, style } = Astro.props;
+// Track renders the list twice so the -50% translateX loop is seamless.
+const track = [...brands, ...brands];
+---
+
+<section class={`brands brands--${style}`} aria-label="Car brands we service">
+  <p class="brands-label">We Service All Major Brands</p>
+  <div class="marquee">
+    <div class="marquee-track">
+      {track.map((brand, i) => (
+        <span class="marquee-item" aria-hidden={i >= brands.length ? 'true' : undefined}>
+          <span class="marquee-dot" aria-hidden="true"></span>{brand}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== CSS-only infinite brand marquee =====
+     The track holds the brand list twice and animates translateX 0 → -50%,
+     so the loop point is invisible. Pauses on hover. Themed in demo CSS. */
+
+  .brands {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .brands-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-muted, #888);
+    margin-bottom: 20px;
+  }
+
+  .marquee {
+    overflow: hidden;
+    /* Fade the left/right edges so items don't clip harshly */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    width: max-content;
+    animation: marqueeScroll 36s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-muted, #888);
+    transition: color 0.2s ease;
+  }
+  .marquee-item:hover {
+    color: var(--color-accent, #f97316);
+  }
+
+  .marquee-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent, #f97316);
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+
+  @keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    .marquee {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+</style>

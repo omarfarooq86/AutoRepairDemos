@@ -24,8 +24,87 @@ const metaDescription = description ?? title;
     <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Flags JS availability before first paint so scroll-reveal styles
+         (gated behind .js in global.css) never hide content for no-JS users. -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body class={`theme-${style}`}>
     <slot />
+    <script is:inline>
+      (function () {
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Sticky navbar state + back-to-top visibility
+        var backToTop = document.querySelector('.back-to-top');
+        function onScroll() {
+          var y = window.scrollY || document.documentElement.scrollTop || 0;
+          document.body.classList.toggle('is-scrolled', y > 8);
+          if (backToTop) backToTop.classList.toggle('is-visible', y > 600);
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        var revealEls = document.querySelectorAll('[data-reveal]');
+
+        // No motion / no IO support: show everything immediately
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+          revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+          return;
+        }
+
+        // Stagger siblings that share a parent (grids reveal in sequence)
+        revealEls.forEach(function (el) {
+          var parent = el.parentElement;
+          if (!parent) return;
+          var siblings = Array.prototype.filter.call(parent.children, function (c) {
+            return c.hasAttribute('data-reveal');
+          });
+          var i = siblings.indexOf(el);
+          if (i > 0) el.style.setProperty('--reveal-delay', Math.min(i, 8) * 70 + 'ms');
+        });
+
+        function animateCount(el) {
+          var text = el.textContent.trim();
+          var m = text.match(/^([\d,]+(?:\.\d+)?)(.*)$/);
+          if (!m) return;
+          var target = parseFloat(m[1].replace(/,/g, ''));
+          if (isNaN(target)) return;
+          var suffix = m[2] || '';
+          var decimals = (m[1].split('.')[1] || '').length;
+          var useComma = m[1].indexOf(',') !== -1;
+          var duration = 1400;
+          var start = null;
+          function tick(now) {
+            if (start === null) start = now;
+            var p = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            var val = (target * eased).toFixed(decimals);
+            if (useComma) {
+              val = Number(val).toLocaleString('en-US', {
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals
+              });
+            }
+            el.textContent = val + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var el = entry.target;
+            if (el.hasAttribute('data-reveal')) el.classList.add('is-visible');
+            if (el.hasAttribute('data-count')) animateCount(el);
+            io.unobserve(el);
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('[data-reveal], [data-count]').forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+    </script>
   </body>
 </html>
